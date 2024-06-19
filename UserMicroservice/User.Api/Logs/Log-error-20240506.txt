@@ -1,0 +1,55 @@
+2024-05-06 15:16:09.060 +03:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:21:47.562 +03:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:36:18.178 +03:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:37:54.411 +03:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:39:17.463 +03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserRole] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_AppUserRole] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:16.887 +03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Login] nvarchar(50) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Phone] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:51.641 +03:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_RoleId] ON [AppUserAppRole] ([RoleId]);
+2024-05-06 15:41:22.534 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Login] ON [Users] ([Login]);

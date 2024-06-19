@@ -1,0 +1,603 @@
+2024-06-16 16:48:52.038 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 16:48:52.123 +03:00 [WRN] Overriding address(es) 'https://localhost:7276, http://localhost:5195'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 16:48:52.133 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:48:52.138 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:48:52.139 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 16:48:52.139 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 16:48:52.139 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 16:48:52.139 +03:00 [INF] Hosting environment: Development
+2024-06-16 16:48:52.139 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 16:49:11.802 +03:00 [INF] Application is shutting down...
+2024-06-16 16:50:05.621 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 16:50:05.787 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 16:50:05.797 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:50:05.802 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:50:05.818 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 16:50:05.818 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 16:50:05.818 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 16:50:05.818 +03:00 [INF] Hosting environment: Development
+2024-06-16 16:50:05.818 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 16:50:07.214 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger - null null
+2024-06-16 16:50:07.493 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger - 301 0 null 285.7309ms
+2024-06-16 16:50:07.495 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 16:50:07.605 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 110.3278ms
+2024-06-16 16:50:07.769 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui.css - null null
+2024-06-16 16:50:07.770 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-bundle.js - null null
+2024-06-16 16:50:07.772 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-standalone-preset.js - null null
+2024-06-16 16:50:07.775 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 16:50:07.777 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.6025ms
+2024-06-16 16:50:07.785 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 16:50:07.851 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.5026ms
+2024-06-16 16:50:07.973 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-06-16 16:50:07.974 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui.css - 200 143943 text/css 205.2752ms
+2024-06-16 16:50:08.025 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-06-16 16:50:08.025 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 254.6366ms
+2024-06-16 16:50:08.135 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-06-16 16:50:08.136 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 365.3873ms
+2024-06-16 16:50:08.439 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 16:50:08.576 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.3994ms
+2024-06-16 16:50:21.287 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-16 16:50:21.289 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 16:50:22.389 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 16:50:22.411 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:50:24.979 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-16 16:50:25.088 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-16 16:50:25.097 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-16 16:50:25.105 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 2691.045ms
+2024-06-16 16:50:25.105 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 16:50:25.112 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 3825.6912ms
+2024-06-16 16:51:12.323 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5234/users - application/json 111
+2024-06-16 16:51:12.333 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-16 16:51:12.338 +03:00 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Users.Application.Comands.CreateUser.CreateUserComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:51:12.814 +03:00 [INF] Executed DbCommand (406ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-16 16:51:12.962 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 50), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Login], [PasswordHash], [Phone])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-06-16 16:51:12.997 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Client'
+2024-06-16 16:51:13.043 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserAppRole] ([RoleId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-16 16:51:13.047 +03:00 [INF] Executing CreatedResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-16 16:51:13.048 +03:00 [INF] Executed action User.Api.Controllers.UserController.Post (User.Api) in 709.3254ms
+2024-06-16 16:51:13.048 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-16 16:51:13.048 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5234/users - 201 null application/json; charset=utf-8 725.0044ms
+2024-06-16 16:51:22.820 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-16 16:51:22.822 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 16:51:22.823 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:51:22.883 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-16 16:51:22.887 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-16 16:51:22.887 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-16 16:51:22.888 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 64.2879ms
+2024-06-16 16:51:22.888 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 16:51:22.888 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 68.3605ms
+2024-06-16 16:51:37.673 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:51:37.675 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:51:37.677 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:51:37.693 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 16:51:38.056 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeMaster (User.Api) in 378.4677ms
+2024-06-16 16:51:38.057 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:51:38.058 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Users.Service.Exeptions.ForbidenExeption: Access denied
+   at Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComandHandler.Handle(GiveUserMasterRoleComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Comands\GiveUserMasterRole\GiveUserMasterRoleComandHandler.cs:line 84
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.MakeMaster(GiveUserMasterRoleComand comand, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 72
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-16 16:51:38.123 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - 500 null text/plain; charset=utf-8 449.4125ms
+2024-06-16 16:52:13.002 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 16:52:13.169 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 16:52:13.185 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:52:13.190 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:52:13.207 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 16:52:13.207 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 16:52:13.207 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 16:52:13.207 +03:00 [INF] Hosting environment: Development
+2024-06-16 16:52:13.207 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 16:52:14.304 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 16:52:14.588 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 292.1644ms
+2024-06-16 16:52:14.750 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 16:52:14.753 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.5494ms
+2024-06-16 16:52:14.762 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 16:52:14.799 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.9517ms
+2024-06-16 16:52:15.079 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 16:52:15.200 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.9141ms
+2024-06-16 16:52:54.826 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:52:54.829 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 16:52:54.899 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-16 16:52:54.902 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-16 16:52:54.902 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - 401 0 null 76.6766ms
+2024-06-16 16:53:15.545 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:53:15.603 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:53:15.623 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:53:16.924 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 16:53:17.230 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeMaster (User.Api) in 1603.1775ms
+2024-06-16 16:53:17.230 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:53:17.233 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Users.Service.Exeptions.ForbidenExeption: Access denied
+   at Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComandHandler.Handle(GiveUserMasterRoleComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Comands\GiveUserMasterRole\GiveUserMasterRoleComandHandler.cs:line 84
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.MakeMaster(GiveUserMasterRoleComand comand, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 72
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-16 16:53:17.264 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - 500 null text/plain; charset=utf-8 1721.937ms
+2024-06-16 16:53:29.777 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:53:29.779 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:53:29.780 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:54:10.917 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 16:54:11.087 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 16:54:11.097 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:54:11.101 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:54:11.119 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 16:54:11.119 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 16:54:11.119 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 16:54:11.119 +03:00 [INF] Hosting environment: Development
+2024-06-16 16:54:11.119 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 16:54:12.219 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 16:54:12.488 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 276.9169ms
+2024-06-16 16:54:12.720 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 16:54:12.724 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 4.0093ms
+2024-06-16 16:54:12.734 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 16:54:12.766 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.7913ms
+2024-06-16 16:54:12.867 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 16:54:12.974 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.624ms
+2024-06-16 16:54:54.962 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 16:54:55.148 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 16:54:55.158 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:54:55.163 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:54:55.176 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 16:54:55.176 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 16:54:55.176 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 16:54:55.176 +03:00 [INF] Hosting environment: Development
+2024-06-16 16:54:55.176 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 16:54:56.045 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 16:54:56.331 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 297.0005ms
+2024-06-16 16:54:56.586 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 16:54:56.588 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 1.878ms
+2024-06-16 16:54:56.594 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 16:54:56.622 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.3138ms
+2024-06-16 16:54:56.729 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 16:54:56.827 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 98.1909ms
+2024-06-16 16:55:10.591 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:55:10.595 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 16:55:10.710 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:55:10.730 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:55:11.970 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 16:55:12.269 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeMaster (User.Api) in 1535.9006ms
+2024-06-16 16:55:12.270 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:55:12.273 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Users.Service.Exeptions.ForbidenExeption: Access denied
+   at Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComandHandler.Handle(GiveUserMasterRoleComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Comands\GiveUserMasterRole\GiveUserMasterRoleComandHandler.cs:line 84
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.MakeMaster(GiveUserMasterRoleComand comand, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 72
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-16 16:55:12.307 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - 500 null text/plain; charset=utf-8 1715.3333ms
+2024-06-16 16:55:18.407 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:55:18.412 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:55:18.413 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:55:26.845 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 16:58:04.672 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 16:58:04.845 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 16:58:04.855 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:58:04.861 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 16:58:04.876 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 16:58:04.876 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 16:58:04.877 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 16:58:04.877 +03:00 [INF] Hosting environment: Development
+2024-06-16 16:58:04.877 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 16:58:05.699 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 16:58:05.999 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 307.3708ms
+2024-06-16 16:58:06.179 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 16:58:06.181 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.1635ms
+2024-06-16 16:58:06.186 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 16:58:06.222 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.3159ms
+2024-06-16 16:58:06.323 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 16:58:06.427 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 104.2427ms
+2024-06-16 16:58:15.774 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-16 16:58:15.777 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 16:58:15.890 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 16:58:15.912 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:58:17.126 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-16 16:58:17.236 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-16 16:58:17.244 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-16 16:58:17.251 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 1337.041ms
+2024-06-16 16:58:17.252 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 16:58:17.258 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 1484.4457ms
+2024-06-16 16:58:24.490 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:58:24.496 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:58:24.501 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 16:58:24.566 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 16:58:24.801 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeMaster (User.Api) in 300.5975ms
+2024-06-16 16:58:24.802 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:58:24.803 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Users.Service.Exeptions.ForbidenExeption: Access denied
+   at Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComandHandler.Handle(GiveUserMasterRoleComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Comands\GiveUserMasterRole\GiveUserMasterRoleComandHandler.cs:line 84
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.MakeMaster(GiveUserMasterRoleComand comand, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 72
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-16 16:58:24.831 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - 500 null text/plain; charset=utf-8 341.5994ms
+2024-06-16 16:58:36.855 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 16:58:36.860 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 16:58:36.861 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 17:00:05.006 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 17:00:05.164 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 17:00:05.176 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 17:00:05.182 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 17:00:05.196 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 17:00:05.196 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 17:00:05.196 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 17:00:05.196 +03:00 [INF] Hosting environment: Development
+2024-06-16 17:00:05.196 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 17:00:05.970 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 17:00:06.243 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 284.5136ms
+2024-06-16 17:00:06.490 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 17:00:06.493 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.1543ms
+2024-06-16 17:00:06.501 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 17:00:06.529 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.0679ms
+2024-06-16 17:00:06.625 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 17:00:06.738 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.6004ms
+2024-06-16 17:00:31.792 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 17:00:31.797 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 17:00:31.909 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 17:00:31.930 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 17:01:50.935 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 17:01:51.110 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 17:01:51.122 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 17:01:51.128 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 17:01:51.142 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 17:01:51.142 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 17:01:51.143 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 17:01:51.143 +03:00 [INF] Hosting environment: Development
+2024-06-16 17:01:51.143 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 17:01:52.089 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 17:01:52.403 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 321.2262ms
+2024-06-16 17:01:52.641 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 17:01:52.643 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.5183ms
+2024-06-16 17:01:52.649 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 17:01:52.677 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.8272ms
+2024-06-16 17:01:52.789 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 17:01:52.898 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.5696ms
+2024-06-16 17:02:06.393 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - application/json 13
+2024-06-16 17:02:06.397 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 17:02:06.516 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 17:02:06.536 +03:00 [INF] Route matched with {action = "MakeMaster", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeMaster(Users.Application.Comands.GiveUserMasterRole.GiveUserMasterRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 17:02:07.788 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 17:02:07.854 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-16 17:02:07.866 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__8__locals1_user_Id_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__8__locals1_user_Id_0 AND [a].[RoleId] = @__adminRole_Id_1
+2024-06-16 17:02:07.986 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserAppRole] ([RoleId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-16 17:02:08.027 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-16 17:02:08.033 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeMaster (User.Api) in 1494.5176ms
+2024-06-16 17:02:08.033 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeMaster (User.Api)'
+2024-06-16 17:02:08.040 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeMaster - 200 null application/json; charset=utf-8 1646.6558ms
+2024-06-16 21:11:56.956 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 21:11:57.135 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 21:11:57.147 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 21:11:57.154 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 21:11:57.173 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 21:11:57.173 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 21:11:57.173 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 21:11:57.173 +03:00 [INF] Hosting environment: Development
+2024-06-16 21:11:57.173 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 21:11:57.928 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 21:11:58.194 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 275.0234ms
+2024-06-16 21:11:58.369 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 21:11:58.372 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.6163ms
+2024-06-16 21:11:58.386 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 21:11:58.418 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.7992ms
+2024-06-16 21:11:58.525 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 21:11:58.628 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 103.6604ms
+2024-06-16 21:12:12.563 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-16 21:12:12.567 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 21:12:15.002 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 21:12:15.063 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 21:12:21.518 +03:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-16 21:12:21.844 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-16 21:12:21.866 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-16 21:12:21.884 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 6812.5954ms
+2024-06-16 21:12:21.885 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-16 21:12:21.902 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 9339.2309ms
+2024-06-16 21:12:47.714 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=true - null 0
+2024-06-16 21:12:47.731 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:12:47.741 +03:00 [INF] Route matched with {action = "MakeAdmin", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeAdmin(Users.Application.Comands.GiveUserAdminRole.GiveUserAdminRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 21:12:48.158 +03:00 [INF] Executed DbCommand (276ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 21:12:48.180 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Admin'
+2024-06-16 21:12:54.692 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__8__locals1_user_Id_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__8__locals1_user_Id_0 AND [a].[RoleId] = @__adminRole_Id_1
+2024-06-16 21:13:03.872 +03:00 [INF] Executed DbCommand (1,212ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AppUserAppRole]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-06-16 21:13:06.975 +03:00 [ERR] An error occurred using a transaction.
+2024-06-16 21:13:07.317 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeAdmin (User.Api) in 19575.3836ms
+2024-06-16 21:13:07.318 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:13:07.321 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: There is already an open DataReader associated with this Connection which must be closed first.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Commit()
+   at Microsoft.Data.SqlClient.SqlTransaction.Commit()
+   at System.Data.Common.DbTransaction.CommitAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.CommitAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.CommitAsync(CancellationToken cancellationToken)
+   at Users.Percistance.ContextTransaction.CommitAsync(CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Percistance\ContextTransaction.cs:line 21
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 26
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.MakeAdmin(GiveUserAdminRoleComand comand, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 66
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-16 21:13:07.416 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=true - 500 null text/plain; charset=utf-8 19703.7983ms
+2024-06-16 21:14:37.230 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=true - null 0
+2024-06-16 21:14:37.242 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:14:37.252 +03:00 [INF] Route matched with {action = "MakeAdmin", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeAdmin(Users.Application.Comands.GiveUserAdminRole.GiveUserAdminRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 21:14:37.484 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 21:14:37.499 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Admin'
+2024-06-16 21:14:40.200 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_user_Id_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__8__locals1_user_Id_0 AND [a].[RoleId] = @__adminRole_Id_1
+2024-06-16 21:15:04.409 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 21:15:04.590 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 21:15:04.604 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 21:15:04.612 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 21:15:04.629 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 21:15:04.629 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 21:15:04.630 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 21:15:04.630 +03:00 [INF] Hosting environment: Development
+2024-06-16 21:15:04.630 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 21:15:05.987 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 21:15:06.269 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 289.9966ms
+2024-06-16 21:15:06.466 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 21:15:06.468 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.348ms
+2024-06-16 21:15:06.478 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 21:15:06.509 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.2987ms
+2024-06-16 21:15:06.635 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 21:15:06.740 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.0621ms
+2024-06-16 21:15:39.871 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=true - null 0
+2024-06-16 21:15:39.882 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-16 21:15:40.178 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:15:40.235 +03:00 [INF] Route matched with {action = "MakeAdmin", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeAdmin(Users.Application.Comands.GiveUserAdminRole.GiveUserAdminRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 21:15:43.480 +03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 21:15:43.654 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Admin'
+2024-06-16 21:15:49.054 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__8__locals1_user_Id_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__8__locals1_user_Id_0 AND [a].[RoleId] = @__adminRole_Id_1
+2024-06-16 21:15:55.547 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [AppUserAppRole]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-06-16 21:16:02.539 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-16 21:16:02.559 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeAdmin (User.Api) in 22316.6281ms
+2024-06-16 21:16:02.560 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:16:02.576 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=true - 200 null application/json; charset=utf-8 22705.0989ms
+2024-06-16 21:16:10.696 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=true - null 0
+2024-06-16 21:16:10.701 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:16:10.702 +03:00 [INF] Route matched with {action = "MakeAdmin", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeAdmin(Users.Application.Comands.GiveUserAdminRole.GiveUserAdminRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 21:16:10.757 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 21:16:10.761 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Admin'
+2024-06-16 21:16:12.994 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_user_Id_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__8__locals1_user_Id_0 AND [a].[RoleId] = @__adminRole_Id_1
+2024-06-16 21:16:19.357 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-16 21:16:19.358 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeAdmin (User.Api) in 8655.5592ms
+2024-06-16 21:16:19.358 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:16:19.359 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=true - 200 null application/json; charset=utf-8 8662.9171ms
+2024-06-16 21:16:59.111 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=false - null 0
+2024-06-16 21:16:59.125 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:16:59.128 +03:00 [INF] Route matched with {action = "MakeAdmin", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] MakeAdmin(Users.Application.Comands.GiveUserAdminRole.GiveUserAdminRoleComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-16 21:16:59.317 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-16 21:16:59.329 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Admin'
+2024-06-16 21:17:04.889 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_user_Id_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__8__locals1_user_Id_0 AND [a].[RoleId] = @__adminRole_Id_1
+2024-06-16 21:17:09.755 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserAppRole] ([RoleId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-16 21:17:22.405 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-16 21:17:22.406 +03:00 [INF] Executed action User.Api.Controllers.UserController.MakeAdmin (User.Api) in 23277.7162ms
+2024-06-16 21:17:22.406 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.MakeAdmin (User.Api)'
+2024-06-16 21:17:22.406 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5234/users/MakeAdmin?Id=3&RemoveRole=false - 200 null application/json; charset=utf-8 23295.2497ms
+2024-06-16 21:21:29.155 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-16 21:21:29.335 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-16 21:21:29.347 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 21:21:29.352 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-16 21:21:29.367 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-16 21:21:29.367 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-16 21:21:29.367 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-16 21:21:29.367 +03:00 [INF] Hosting environment: Development
+2024-06-16 21:21:29.368 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-16 21:21:30.208 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-16 21:21:30.549 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 351.6742ms
+2024-06-16 21:21:30.789 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-16 21:21:30.790 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 1.944ms
+2024-06-16 21:21:30.798 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-16 21:21:30.831 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.0848ms
+2024-06-16 21:21:30.947 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-16 21:21:31.069 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.7435ms

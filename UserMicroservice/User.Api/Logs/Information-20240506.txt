@@ -1,0 +1,525 @@
+2024-05-06 15:04:40.725 +03:00 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [CycleServiceDB];
+2024-05-06 15:04:40.804 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CycleServiceDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-05-06 15:04:40.819 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:04:40.867 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-05-06 15:04:40.868 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:04:40.880 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:04:40.883 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:04:40.893 +03:00 [INF] Applying migration '20240506120236_Initial'.
+2024-05-06 15:04:40.920 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserRole] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_AppUserRole] PRIMARY KEY ([Id])
+);
+2024-05-06 15:04:40.921 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Login] nvarchar(50) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Phone] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-05-06 15:04:40.922 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserAppRole] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [RoleId] int NOT NULL,
+    CONSTRAINT [PK_AppUserAppRole] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AppUserAppRole_AppUserRole_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AppUserRole] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AppUserAppRole_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:04:40.922 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_RoleId] ON [AppUserAppRole] ([RoleId]);
+2024-05-06 15:04:40.923 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_UserId] ON [AppUserAppRole] ([UserId]);
+2024-05-06 15:04:40.923 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Login] ON [Users] ([Login]);
+2024-05-06 15:04:40.925 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240506120236_Initial', N'8.0.4');
+2024-05-06 15:16:08.949 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:16:08.989 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:16:08.991 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:16:08.991 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:16:09.001 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:16:09.011 +03:00 [INF] Applying migration '20240506121433_RR-Initial'.
+2024-05-06 15:16:09.060 +03:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:21:47.447 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:21:47.490 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:21:47.491 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:21:47.492 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:21:47.502 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:21:47.513 +03:00 [INF] Applying migration '20240506121433_RR-Initial'.
+2024-05-06 15:21:47.562 +03:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:36:18.061 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:36:18.107 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:36:18.109 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:36:18.109 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:36:18.120 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:36:18.130 +03:00 [INF] Applying migration '20240506121433_RR-Initial'.
+2024-05-06 15:36:18.178 +03:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:37:54.293 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:37:54.339 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:37:54.340 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:37:54.341 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:37:54.353 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:37:54.363 +03:00 [INF] Applying migration '20240506121433_RR-Initial'.
+2024-05-06 15:37:54.411 +03:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestEntity] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestEntity] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestEntity_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestEntity_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:39:17.349 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:39:17.393 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:39:17.395 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:39:17.395 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:39:17.405 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:39:17.415 +03:00 [INF] Applying migration '20240506123910_RR-Initial'.
+2024-05-06 15:39:17.463 +03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserRole] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_AppUserRole] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:16.759 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:40:16.805 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:40:16.807 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:40:16.807 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:40:16.819 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:40:16.829 +03:00 [INF] Applying migration '20240506123910_RR-Initial'.
+2024-05-06 15:40:16.878 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Components] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Components] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:16.881 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:16.883 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ServicesCenters] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Location] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_ServicesCenters] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:16.887 +03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Login] nvarchar(50) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Phone] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:51.520 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:40:51.563 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:40:51.565 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:40:51.565 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:40:51.575 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:40:51.584 +03:00 [INF] Applying migration '20240506123910_RR-Initial'.
+2024-05-06 15:40:51.629 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Components] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Components] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:51.630 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:51.631 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ServicesCenters] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Location] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_ServicesCenters] PRIMARY KEY ([Id])
+);
+2024-05-06 15:40:51.633 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Requests] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_Requests] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Requests_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:40:51.635 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestComponent] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ComponentId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestComponent] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestComponent_Components_ComponentId] FOREIGN KEY ([ComponentId]) REFERENCES [Components] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestComponent_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:40:51.636 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestService] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ServiceId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestService] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestService_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestService_Services_ServiceId] FOREIGN KEY ([ServiceId]) REFERENCES [Services] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:40:51.641 +03:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_RoleId] ON [AppUserAppRole] ([RoleId]);
+2024-05-06 15:41:22.411 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:41:22.452 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:41:22.454 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:41:22.454 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:41:22.465 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:41:22.474 +03:00 [INF] Applying migration '20240506123910_RR-Initial'.
+2024-05-06 15:41:22.520 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Components] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Components] PRIMARY KEY ([Id])
+);
+2024-05-06 15:41:22.522 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-05-06 15:41:22.522 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ServicesCenters] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Location] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_ServicesCenters] PRIMARY KEY ([Id])
+);
+2024-05-06 15:41:22.524 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Requests] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_Requests] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Requests_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:41:22.525 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestComponent] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ComponentId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestComponent] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestComponent_Components_ComponentId] FOREIGN KEY ([ComponentId]) REFERENCES [Components] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestComponent_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:41:22.526 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestService] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ServiceId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestService] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestService_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestService_Services_ServiceId] FOREIGN KEY ([ServiceId]) REFERENCES [Services] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:41:22.527 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestComponent_ComponentId] ON [RepairRequestComponent] ([ComponentId]);
+2024-05-06 15:41:22.527 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestComponent_RepairRequestId] ON [RepairRequestComponent] ([RepairRequestId]);
+2024-05-06 15:41:22.528 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestService_RepairRequestId] ON [RepairRequestService] ([RepairRequestId]);
+2024-05-06 15:41:22.528 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestService_ServiceId] ON [RepairRequestService] ([ServiceId]);
+2024-05-06 15:41:22.529 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Requests_MasterId] ON [Requests] ([MasterId]);
+2024-05-06 15:41:22.534 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Login] ON [Users] ([Login]);
+2024-05-06 15:41:32.619 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:41:32.661 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:41:32.663 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:41:32.663 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:41:32.673 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:41:32.683 +03:00 [INF] Applying migration '20240506123910_RR-Initial'.
+2024-05-06 15:41:32.731 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Components] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Components] PRIMARY KEY ([Id])
+);
+2024-05-06 15:41:32.732 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-05-06 15:41:32.733 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ServicesCenters] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Location] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_ServicesCenters] PRIMARY KEY ([Id])
+);
+2024-05-06 15:41:32.735 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Requests] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_Requests] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Requests_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:41:32.736 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestComponent] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ComponentId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestComponent] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestComponent_Components_ComponentId] FOREIGN KEY ([ComponentId]) REFERENCES [Components] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestComponent_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:41:32.737 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestService] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ServiceId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestService] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestService_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestService_Services_ServiceId] FOREIGN KEY ([ServiceId]) REFERENCES [Services] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:41:32.738 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestComponent_ComponentId] ON [RepairRequestComponent] ([ComponentId]);
+2024-05-06 15:41:32.739 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestComponent_RepairRequestId] ON [RepairRequestComponent] ([RepairRequestId]);
+2024-05-06 15:41:32.739 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestService_RepairRequestId] ON [RepairRequestService] ([RepairRequestId]);
+2024-05-06 15:41:32.740 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestService_ServiceId] ON [RepairRequestService] ([ServiceId]);
+2024-05-06 15:41:32.740 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Requests_MasterId] ON [Requests] ([MasterId]);
+2024-05-06 15:41:32.741 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240506123910_RR-Initial', N'8.0.4');
+2024-05-06 15:43:31.380 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:43:31.417 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:43:31.418 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:43:31.466 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-05-06 15:43:31.467 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-06 15:43:31.468 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-06 15:43:31.471 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-06 15:43:31.480 +03:00 [INF] Applying migration '20240506123910_RR-Initial'.
+2024-05-06 15:43:31.515 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserRole] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_AppUserRole] PRIMARY KEY ([Id])
+);
+2024-05-06 15:43:31.516 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Components] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Components] PRIMARY KEY ([Id])
+);
+2024-05-06 15:43:31.517 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Price] int NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-05-06 15:43:31.518 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ServicesCenters] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Location] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_ServicesCenters] PRIMARY KEY ([Id])
+);
+2024-05-06 15:43:31.519 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Login] nvarchar(50) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Phone] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-05-06 15:43:31.520 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserAppRole] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [RoleId] int NOT NULL,
+    CONSTRAINT [PK_AppUserAppRole] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AppUserAppRole_AppUserRole_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AppUserRole] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AppUserAppRole_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:43:31.521 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Requests] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [MasterId] int NOT NULL,
+    CONSTRAINT [PK_Requests] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Requests_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:43:31.523 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestComponent] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ComponentId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestComponent] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestComponent_Components_ComponentId] FOREIGN KEY ([ComponentId]) REFERENCES [Components] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestComponent_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:43:31.524 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RepairRequestService] (
+    [Id] int NOT NULL IDENTITY,
+    [RepairRequestId] int NOT NULL,
+    [ServiceId] int NOT NULL,
+    CONSTRAINT [PK_RepairRequestService] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RepairRequestService_Requests_RepairRequestId] FOREIGN KEY ([RepairRequestId]) REFERENCES [Requests] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_RepairRequestService_Services_ServiceId] FOREIGN KEY ([ServiceId]) REFERENCES [Services] ([Id]) ON DELETE CASCADE
+);
+2024-05-06 15:43:31.524 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_RoleId] ON [AppUserAppRole] ([RoleId]);
+2024-05-06 15:43:31.525 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_UserId] ON [AppUserAppRole] ([UserId]);
+2024-05-06 15:43:31.525 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestComponent_ComponentId] ON [RepairRequestComponent] ([ComponentId]);
+2024-05-06 15:43:31.526 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestComponent_RepairRequestId] ON [RepairRequestComponent] ([RepairRequestId]);
+2024-05-06 15:43:31.526 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestService_RepairRequestId] ON [RepairRequestService] ([RepairRequestId]);
+2024-05-06 15:43:31.527 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RepairRequestService_ServiceId] ON [RepairRequestService] ([ServiceId]);
+2024-05-06 15:43:31.528 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Requests_MasterId] ON [Requests] ([MasterId]);
+2024-05-06 15:43:31.528 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Login] ON [Users] ([Login]);
+2024-05-06 15:43:31.529 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240506123910_RR-Initial', N'8.0.4');

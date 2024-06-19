@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "UaDx5IOWV3+r0TFX5mjA2LkGdU2KkoPxDX4Ul0iCrYs=",
+  "Source": "RepairRequest.Api",
+  "BasePath": "_content/RepairRequest.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

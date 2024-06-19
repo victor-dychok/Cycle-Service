@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ServiceCenter.Api.props" />
+</Project>

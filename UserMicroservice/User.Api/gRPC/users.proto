@@ -1,0 +1,32 @@
+syntax = "proto3";
+option csharp_namespace = "GrpcGreeter";
+package greet;
+
+// UsersService
+service UsersService {
+  // GetUser
+  rpc GetUser (GetUserRequest) returns (UserReply);
+  // GetUsers
+  rpc GetUsers (GetUsersRequest) returns (stream UserReply);
+}
+
+message GetUsersRequest{
+   optional string FreeText = 1;
+   optional int32 Limit = 2;
+   optional int32 Offset = 3;
+}
+
+message GetUserRequest{
+  string applicationUserId = 1;
+}
+
+message UserReply {
+  string applicationUserId = 1;
+  string login = 2;
+  repeated int32 roles = 3;
+}
+
+message MyDto{
+  int32 count = 1;
+  repeated UserReply UserReply = 2;
+}

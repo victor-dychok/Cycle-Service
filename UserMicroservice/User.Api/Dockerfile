@@ -1,0 +1,23 @@
+﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["UserMicroservice/User.Api/User.Api.csproj", "User.Api/"]
+COPY ["UserMicroservice/Users.Application/Users.Application.csproj", "Users.Application/"]
+COPY ["UserMicroservice/Users.Domain/Users.Domain.csproj", "Users.Domain/"]
+COPY ["UserMicroservice/Users.Percistance/Users.Percistance.csproj", "Users.Percistance/"]
+RUN dotnet restore "UserMicroservice/User.Api/User.Api.csproj"
+COPY . .
+WORKDIR "/src/User.Api"
+RUN dotnet build "User.Api.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "User.Api.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "User.Api.dll"]

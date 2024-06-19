@@ -1,0 +1,22 @@
+2024-05-15 11:22:12.713 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-15 11:22:12.775 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-15 11:22:12.776 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-15 11:22:12.777 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-15 11:22:12.816 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-15 11:22:12.826 +03:00 [INF] Applying migration '20240515082154_service-center-master-relation'.
+2024-05-15 11:22:12.876 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ServicesCenters] ADD [MasterId] int NOT NULL DEFAULT 0;
+2024-05-15 11:22:12.879 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ServicesCenters_MasterId] ON [ServicesCenters] ([MasterId]);
+2024-05-15 11:22:12.880 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ServicesCenters] ADD CONSTRAINT [FK_ServicesCenters_Users_MasterId] FOREIGN KEY ([MasterId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE;
+2024-05-15 11:22:12.881 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240515082154_service-center-master-relation', N'8.0.4');

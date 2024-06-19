@@ -1,0 +1,483 @@
+2024-06-19 12:24:25.537 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:24:25.709 +03:00 [INF] Now listening on: https://localhost:7104
+2024-06-19 12:24:25.709 +03:00 [INF] Now listening on: http://localhost:5148
+2024-06-19 12:24:25.710 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:24:25.711 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:24:25.711 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-06-19 12:24:26.163 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-06-19 12:24:26.371 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 209.8065ms
+2024-06-19 12:24:26.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:24:26.387 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.5853ms
+2024-06-19 12:24:26.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-06-19 12:24:26.478 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.3336ms
+2024-06-19 12:24:26.629 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-06-19 12:24:26.706 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.9725ms
+2024-06-19 12:24:39.278 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 12:24:40.118 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 12:24:40.137 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 12:24:43.536 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 12:24:43.670 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 12:24:43.693 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:24:43.704 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:24:43.705 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:24:43.836 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 12:24:43.856 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 12:24:43.863 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 3723.4234ms
+2024-06-19 12:24:43.864 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 12:24:43.869 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 4591.232ms
+2024-06-19 12:43:34.609 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 12:43:34.612 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 12:43:34.613 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 12:43:35.621 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 12:43:35.626 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 12:43:35.630 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:43:35.631 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:43:35.633 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:43:35.637 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 12:43:35.639 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 12:43:35.639 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1025.8346ms
+2024-06-19 12:43:35.639 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 12:43:35.639 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1030.3076ms
+2024-06-19 12:51:37.240 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 12:51:37.245 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 12:51:37.246 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 12:51:37.327 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 12:51:37.490 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 12:51:37.494 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:51:37.495 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:51:37.496 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 12:51:37.500 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 12:51:37.500 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 12:51:37.500 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 254.2602ms
+2024-06-19 12:51:37.501 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 12:51:37.501 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 260.5781ms
+2024-06-19 13:11:37.615 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 13:11:37.616 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:11:37.616 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:11:38.527 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:11:38.530 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:11:38.533 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:11:38.533 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:11:38.534 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:11:38.538 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:11:38.538 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:11:38.538 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 921.9975ms
+2024-06-19 13:11:38.538 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:11:38.538 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 923.0759ms
+2024-06-19 13:13:43.653 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 51
+2024-06-19 13:13:43.654 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:13:43.654 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:13:43.657 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:13:43.658 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:13:43.660 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:13:43.661 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:13:43.664 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:13:43.665 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:13:43.665 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 10.8332ms
+2024-06-19 13:13:43.665 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:13:43.665 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 11.6448ms
+2024-06-19 13:20:00.324 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 51
+2024-06-19 13:20:00.325 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:20:00.325 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:20:00.390 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:20:00.393 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:20:00.395 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:20:00.396 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:20:00.400 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:20:00.400 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:20:00.401 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 75.7518ms
+2024-06-19 13:20:00.401 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:20:00.401 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 76.7936ms
+2024-06-19 13:24:30.456 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 51
+2024-06-19 13:24:30.457 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:24:30.457 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:24:30.535 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:24:30.540 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:24:30.543 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:24:30.544 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:24:30.549 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:24:30.549 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:24:30.550 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 92.7428ms
+2024-06-19 13:24:30.550 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:24:30.550 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 93.7491ms
+2024-06-19 13:36:07.443 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 13:36:07.443 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:36:07.443 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:36:07.519 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:36:07.522 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:36:07.525 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:36:07.526 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:36:07.526 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:36:07.529 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:36:07.529 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:36:07.529 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 85.943ms
+2024-06-19 13:36:07.529 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:36:07.529 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 86.7763ms
+2024-06-19 13:44:19.443 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 13:44:19.444 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:44:19.444 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:44:19.517 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:44:19.520 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:44:19.522 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:44:19.523 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:44:19.523 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:44:19.527 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:44:19.527 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:44:19.527 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 83.3765ms
+2024-06-19 13:44:19.527 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:44:19.528 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 84.1014ms
+2024-06-19 13:45:37.239 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 13:45:37.239 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:45:37.239 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:45:37.245 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:45:37.248 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:45:37.250 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:45:37.251 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:45:37.253 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:45:37.258 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:45:37.259 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:45:37.259 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 19.8433ms
+2024-06-19 13:45:37.259 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:45:37.260 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 20.5027ms
+2024-06-19 13:57:29.081 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:57:29.215 +03:00 [INF] Now listening on: https://localhost:7104
+2024-06-19 13:57:29.215 +03:00 [INF] Now listening on: http://localhost:5148
+2024-06-19 13:57:29.216 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:57:29.217 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:57:29.217 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-06-19 13:57:29.575 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-06-19 13:57:29.716 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 140.772ms
+2024-06-19 13:57:29.726 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:57:29.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.1446ms
+2024-06-19 13:57:29.743 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-06-19 13:57:29.764 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.7641ms
+2024-06-19 13:57:29.984 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-06-19 13:57:30.072 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.4407ms
+2024-06-19 13:57:42.307 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 13:57:42.475 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:57:42.492 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 13:57:44.613 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 13:57:44.709 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 13:57:44.730 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:57:44.740 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:57:44.741 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 13:57:44.841 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 13:57:44.861 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 13:57:44.868 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 2373.5145ms
+2024-06-19 13:57:44.868 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 13:57:44.873 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 2566.2826ms
+2024-06-19 14:00:57.047 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 14:00:57.053 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 14:00:57.054 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 14:00:57.118 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 14:00:57.123 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 14:00:57.126 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 14:00:57.127 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 14:00:57.129 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 14:00:57.136 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 14:00:57.137 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 14:00:57.138 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 83.8647ms
+2024-06-19 14:00:57.138 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 14:00:57.138 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 90.9501ms
+2024-06-19 14:05:37.576 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 14:05:37.826 +03:00 [INF] Now listening on: https://localhost:7104
+2024-06-19 14:05:37.826 +03:00 [INF] Now listening on: http://localhost:5148
+2024-06-19 14:05:37.827 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 14:05:37.828 +03:00 [INF] Hosting environment: Development
+2024-06-19 14:05:37.828 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-06-19 14:05:38.223 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-06-19 14:05:38.518 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 301.3083ms
+2024-06-19 14:05:38.528 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 14:05:38.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 7.7592ms
+2024-06-19 14:05:38.546 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-06-19 14:05:38.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.2187ms
+2024-06-19 14:05:38.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-06-19 14:05:38.791 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.2438ms
+2024-06-19 14:05:49.200 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 50
+2024-06-19 14:05:49.382 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 14:05:49.402 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 14:05:51.159 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-19 14:05:51.273 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-19 14:05:51.299 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 14:05:51.310 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 14:05:51.312 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-19 14:05:51.432 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-19 14:05:51.457 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-19 14:05:51.466 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 2060.9675ms
+2024-06-19 14:05:51.466 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-19 14:05:51.473 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 2273.1137ms
+2024-06-19 14:06:06.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/Auth/GetMyInfo - null null
+2024-06-19 14:06:06.092 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.GetMyInfo (Auth.Api)'
+2024-06-19 14:06:06.095 +03:00 [INF] Route matched with {action = "GetMyInfo", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyInfo(MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-19 14:06:06.315 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-19 14:06:06.321 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.GetUserDto'.
+2024-06-19 14:06:06.322 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.GetMyInfo (Auth.Api) in 227.001ms
+2024-06-19 14:06:06.322 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.GetMyInfo (Auth.Api)'
+2024-06-19 14:06:06.323 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/Auth/GetMyInfo - 200 null application/json; charset=utf-8 275.6397ms

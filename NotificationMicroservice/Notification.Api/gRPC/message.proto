@@ -1,0 +1,18 @@
+syntax = "proto3";
+ 
+option csharp_namespace = "MessagesServiceNS";
+ 
+package greet;
+ 
+service MessagesServiceProto {
+  rpc SendMessage (MessageRequest) returns (MessageReply);
+}
+ 
+message MessageRequest {
+  string email = 1;
+  string message = 2;
+}
+ 
+message MessageReply {
+  string message = 1;
+}

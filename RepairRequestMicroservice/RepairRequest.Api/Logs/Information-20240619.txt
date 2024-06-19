@@ -1,0 +1,1305 @@
+2024-06-19 12:25:18.764 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:25:19.055 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:25:19.055 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:25:19.056 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:25:19.057 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:25:19.057 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:25:19.816 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:25:20.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 227.6755ms
+2024-06-19 12:25:20.045 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:25:20.053 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.9444ms
+2024-06-19 12:25:20.065 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:25:20.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.9617ms
+2024-06-19 12:25:20.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:25:20.441 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.5816ms
+2024-06-19 12:25:35.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-06-19 12:25:36.806 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-06-19 12:25:36.826 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:25:39.863 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-06-19 12:25:39.964 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-06-19 12:25:39.974 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-19 12:25:39.995 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 3164.5617ms
+2024-06-19 12:25:39.995 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-06-19 12:25:40.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 4315.7836ms
+2024-06-19 12:25:56.561 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:25:56.579 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:25:56.584 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:25:56.702 +03:00 [INF] Executed DbCommand (57ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:25:56.725 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:25:56.743 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:25:56.768 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:25:56.773 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:25:56.901 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:34:07.105 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:34:07.422 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:34:07.423 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:34:07.428 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:34:07.429 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:34:07.429 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:34:07.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:34:07.920 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 201.805ms
+2024-06-19 12:34:07.925 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:34:07.932 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.3238ms
+2024-06-19 12:34:07.941 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:34:07.979 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.3978ms
+2024-06-19 12:34:08.234 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:34:08.361 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.8647ms
+2024-06-19 12:34:33.593 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:34:34.194 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:34:34.224 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:34:45.819 +03:00 [INF] Executed DbCommand (79ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:34:46.453 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:34:46.467 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:34:46.568 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:34:46.617 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:34:46.829 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:35:15.714 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:35:15.985 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:35:15.986 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:35:15.987 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:35:15.987 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:35:15.987 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:35:16.505 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:35:16.705 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 203.874ms
+2024-06-19 12:35:16.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:35:16.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.2141ms
+2024-06-19 12:35:16.732 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:35:16.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.4201ms
+2024-06-19 12:35:16.879 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:35:17.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 132.6536ms
+2024-06-19 12:35:30.322 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:35:30.444 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:35:30.467 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:35:31.982 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:35:32.059 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:35:32.073 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:35:32.113 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:35:32.137 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:35:32.251 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:35:33.322 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 2851.2365ms
+2024-06-19 12:35:33.323 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:35:33.327 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at RepairRequest.Application.Abstraction.MqService.SendMessage(String queue, String message) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Abstraction\MqService.cs:line 27
+   at RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComandHandler.Handle(AcceptRequestComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Requests\Comands\AcceptRequest\AcceptRequestComandHandler.cs:line 90
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest(AcceptRequestComand command, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-19 12:35:33.364 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 500 null text/plain; charset=utf-8 3042.0132ms
+2024-06-19 12:43:49.674 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:43:49.958 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:43:49.958 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:43:49.959 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:43:49.960 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:43:49.960 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:43:50.704 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:43:50.995 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 294.4019ms
+2024-06-19 12:43:51.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:43:51.013 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.5635ms
+2024-06-19 12:43:51.024 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:43:51.435 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 410.5932ms
+2024-06-19 12:43:51.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:43:51.696 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.2202ms
+2024-06-19 12:44:13.941 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:44:14.432 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:44:14.457 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:44:25.258 +03:00 [INF] Executed DbCommand (124ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:44:25.749 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:44:25.762 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:44:26.016 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:44:26.064 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:44:26.361 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:44:27.486 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 13025.8574ms
+2024-06-19 12:44:27.487 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:44:27.491 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at RepairRequest.Application.Abstraction.MqService.SendMessage(String queue, String message) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Abstraction\MqService.cs:line 28
+   at RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComandHandler.Handle(AcceptRequestComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Requests\Comands\AcceptRequest\AcceptRequestComandHandler.cs:line 90
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest(AcceptRequestComand command, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-19 12:44:27.604 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 500 null text/plain; charset=utf-8 13662.8489ms
+2024-06-19 12:47:41.386 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:47:41.685 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:47:41.685 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:47:41.687 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:47:41.687 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:47:41.687 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:47:42.141 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:47:42.362 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 229.1108ms
+2024-06-19 12:47:42.374 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:47:42.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.2822ms
+2024-06-19 12:47:42.388 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:47:42.430 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.2397ms
+2024-06-19 12:47:42.527 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:47:42.640 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.7968ms
+2024-06-19 12:47:57.605 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:47:57.736 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:47:57.758 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:47:59.131 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:47:59.208 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:47:59.222 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:47:59.252 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:47:59.272 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:47:59.386 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:47:59.743 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 1982.7531ms
+2024-06-19 12:47:59.744 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:47:59.747 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at RepairRequest.Application.Abstraction.MqService.SendMessage(String queue, String message) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Abstraction\MqService.cs:line 28
+   at RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComandHandler.Handle(AcceptRequestComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Requests\Comands\AcceptRequest\AcceptRequestComandHandler.cs:line 90
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest(AcceptRequestComand command, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-19 12:47:59.771 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 500 null text/plain; charset=utf-8 2165.6077ms
+2024-06-19 12:51:48.048 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:51:48.424 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:51:48.424 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:51:48.426 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:51:48.426 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:51:48.426 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:51:49.186 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:51:49.418 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 234.4518ms
+2024-06-19 12:51:49.461 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:51:49.461 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:51:49.468 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.6398ms
+2024-06-19 12:51:49.515 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.5552ms
+2024-06-19 12:51:49.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:51:49.813 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 199.0104ms
+2024-06-19 12:52:11.939 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:52:12.065 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:52:12.090 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:52:13.667 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:52:13.758 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:52:13.775 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:52:13.810 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:52:13.842 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:52:13.979 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:52:14.406 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 2312.5628ms
+2024-06-19 12:52:14.407 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:52:14.410 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at RepairRequest.Application.Abstraction.MqService.SendMessage(String queue, String message) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Abstraction\MqService.cs:line 28
+   at RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComandHandler.Handle(AcceptRequestComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Requests\Comands\AcceptRequest\AcceptRequestComandHandler.cs:line 90
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest(AcceptRequestComand command, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-19 12:52:14.449 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 500 null text/plain; charset=utf-8 2509.7805ms
+2024-06-19 12:52:41.084 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:52:41.457 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:52:41.457 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:52:41.459 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:52:41.460 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:52:41.460 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:52:42.085 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:52:42.408 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 328.79ms
+2024-06-19 12:52:42.427 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:52:42.439 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 11.7776ms
+2024-06-19 12:52:42.440 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:52:42.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.4711ms
+2024-06-19 12:52:42.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:52:42.804 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 145.5432ms
+2024-06-19 12:52:57.868 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:52:58.016 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-06-19 12:52:58.018 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-06-19 12:52:58.024 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-19 12:52:58.031 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-19 12:52:58.031 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 401 0 null 163.0184ms
+2024-06-19 12:53:20.589 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:53:20.633 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:53:20.655 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:53:22.135 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:53:22.218 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:53:22.232 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:53:22.274 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:53:22.317 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:53:22.463 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:53:31.530 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 10872.1621ms
+2024-06-19 12:53:31.531 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:53:31.533 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at RepairRequest.Application.Abstraction.MqService.SendMessage(String queue, String message) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Abstraction\MqService.cs:line 28
+   at RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComandHandler.Handle(AcceptRequestComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Requests\Comands\AcceptRequest\AcceptRequestComandHandler.cs:line 90
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest(AcceptRequestComand command, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-19 12:53:31.591 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 500 null text/plain; charset=utf-8 11001.6523ms
+2024-06-19 12:54:01.481 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 12:54:01.822 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 12:54:01.822 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 12:54:01.824 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 12:54:01.824 +03:00 [INF] Hosting environment: Development
+2024-06-19 12:54:01.824 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 12:54:02.488 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 12:54:02.744 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 266.4561ms
+2024-06-19 12:54:02.766 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 12:54:02.774 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.0828ms
+2024-06-19 12:54:02.780 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 12:54:02.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.4129ms
+2024-06-19 12:54:02.986 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 12:54:03.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.9816ms
+2024-06-19 12:54:17.578 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 12:54:17.716 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:54:17.738 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 12:54:19.292 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 12:54:19.392 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 12:54:19.406 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 12:54:19.448 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 12:54:19.469 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 12:54:19.589 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 12:54:27.983 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 12:54:28.005 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 10263.8448ms
+2024-06-19 12:54:28.006 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 12:54:28.014 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 10435.8665ms
+2024-06-19 13:11:47.540 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:11:47.791 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:11:47.792 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:11:47.793 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:11:47.793 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:11:47.793 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:11:48.273 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:11:48.567 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 299.544ms
+2024-06-19 13:11:48.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:11:48.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:11:48.696 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 89.9007ms
+2024-06-19 13:11:48.734 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.9218ms
+2024-06-19 13:11:48.825 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:11:48.970 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 144.9133ms
+2024-06-19 13:12:08.259 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:12:08.375 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:12:08.395 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:12:09.768 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:12:09.849 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:12:09.864 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:12:09.892 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:12:09.917 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:12:10.045 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:12:10.262 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:12:10.281 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 1882.4909ms
+2024-06-19 13:12:10.282 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:12:10.288 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 2029.1864ms
+2024-06-19 13:13:01.337 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:13:01.345 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:13:01.346 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:13:01.368 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:13:01.369 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:13:01.372 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:13:01.373 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:13:01.374 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:13:01.377 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:13:01.394 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:13:01.394 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 47.9826ms
+2024-06-19 13:13:01.394 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:13:01.394 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 57.2495ms
+2024-06-19 13:13:23.414 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/done - application/json 13
+2024-06-19 13:13:23.418 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:13:23.422 +03:00 [INF] Route matched with {action = "SetDone", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SetDone(RepairRequest.Application.Requests.Comands.SetDoneStatus.SetDoneStatusComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:13:23.487 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__currentUserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentUserId_0
+2024-06-19 13:13:23.492 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:13:23.828 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api) in 406.2787ms
+2024-06-19 13:13:23.829 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:13:23.832 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RepairRequest.Service.Exeptions.ForbidenExeption: No permision
+   at RepairRequest.Application.Requests.Comands.SetDoneStatus.SetDoneStatusComandHandler.Handle(SetDoneStatusComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Requests\Comands\SetDoneStatus\SetDoneStatusComandHandler.cs:line 60
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.SetDone(SetDoneStatusComand command, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 78
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-19 13:13:23.868 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/done - 500 null text/plain; charset=utf-8 453.2577ms
+2024-06-19 13:14:29.734 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/done - application/json 13
+2024-06-19 13:14:29.767 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:14:29.767 +03:00 [INF] Route matched with {action = "SetDone", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SetDone(RepairRequest.Application.Requests.Comands.SetDoneStatus.SetDoneStatusComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:14:29.773 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__currentUserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentUserId_0
+2024-06-19 13:14:29.778 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:14:29.785 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Done'
+2024-06-19 13:14:29.787 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:14:29.788 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:14:29.788 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api) in 20.778ms
+2024-06-19 13:14:29.788 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:14:29.789 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/done - 200 null application/json; charset=utf-8 54.1168ms
+2024-06-19 13:20:03.430 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:20:03.750 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:20:03.750 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:20:03.751 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:20:03.751 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:20:03.751 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:20:04.074 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:20:04.271 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 204.3503ms
+2024-06-19 13:20:04.277 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:20:04.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.0375ms
+2024-06-19 13:20:04.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:20:04.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.5832ms
+2024-06-19 13:20:04.433 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:20:04.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.342ms
+2024-06-19 13:20:51.687 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/done - application/json 13
+2024-06-19 13:20:51.815 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:20:51.835 +03:00 [INF] Route matched with {action = "SetDone", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SetDone(RepairRequest.Application.Requests.Comands.SetDoneStatus.SetDoneStatusComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:20:53.418 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__currentUserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentUserId_0
+2024-06-19 13:20:53.521 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:20:53.566 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Done'
+2024-06-19 13:20:53.723 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:20:53.783 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:20:53.811 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api) in 1970.4243ms
+2024-06-19 13:20:53.812 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:20:53.821 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/done - 200 null application/json; charset=utf-8 2134.4382ms
+2024-06-19 13:22:01.653 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:22:01.933 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:22:01.933 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:22:01.935 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:22:01.935 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:22:01.935 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:22:02.656 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:22:02.878 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 227.361ms
+2024-06-19 13:22:02.885 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:22:02.893 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.9181ms
+2024-06-19 13:22:02.907 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:22:02.948 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.3896ms
+2024-06-19 13:22:03.049 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:22:03.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 116.9807ms
+2024-06-19 13:22:22.893 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/done - application/json 13
+2024-06-19 13:22:23.019 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:22:23.039 +03:00 [INF] Route matched with {action = "SetDone", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SetDone(RepairRequest.Application.Requests.Comands.SetDoneStatus.SetDoneStatusComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:22:24.457 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__currentUserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentUserId_0
+2024-06-19 13:22:24.531 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:22:24.559 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Done'
+2024-06-19 13:22:24.665 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:22:24.703 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:22:24.724 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api) in 1681.9526ms
+2024-06-19 13:22:24.724 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:22:24.730 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/done - 200 null application/json; charset=utf-8 1837.8229ms
+2024-06-19 13:24:31.897 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:24:32.243 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:24:32.243 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:24:32.245 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:24:32.245 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:24:32.245 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:24:32.599 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:24:32.810 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 215.9429ms
+2024-06-19 13:24:32.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:24:32.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.5093ms
+2024-06-19 13:24:32.839 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:24:32.885 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.6782ms
+2024-06-19 13:24:32.973 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:24:33.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.7302ms
+2024-06-19 13:25:30.181 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/done - application/json 13
+2024-06-19 13:25:30.303 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:25:30.326 +03:00 [INF] Route matched with {action = "SetDone", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SetDone(RepairRequest.Application.Requests.Comands.SetDoneStatus.SetDoneStatusComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:25:31.662 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__currentUserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentUserId_0
+2024-06-19 13:25:31.740 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:25:31.769 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Done'
+2024-06-19 13:25:31.867 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:25:32.089 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:25:32.108 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api) in 1779.7786ms
+2024-06-19 13:25:32.109 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.SetDone (RepairRequest.Api)'
+2024-06-19 13:25:32.115 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/done - 200 null application/json; charset=utf-8 1934.5965ms
+2024-06-19 13:36:02.407 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:36:02.751 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:36:02.751 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:36:02.753 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:36:02.753 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:36:02.753 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:36:03.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:36:03.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 191.8574ms
+2024-06-19 13:36:03.468 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:36:03.477 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.5649ms
+2024-06-19 13:36:03.486 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:36:03.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.9688ms
+2024-06-19 13:36:03.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:36:03.736 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.7264ms
+2024-06-19 13:36:31.919 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:36:32.037 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:36:32.056 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:36:33.369 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:36:33.443 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:36:33.456 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:36:33.482 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:36:33.505 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:36:33.611 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:44:19.171 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:44:20.692 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:44:20.692 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:44:20.693 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:44:20.694 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:44:20.694 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:44:20.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:44:21.221 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 229.6301ms
+2024-06-19 13:44:21.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:44:21.244 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 10.7688ms
+2024-06-19 13:44:21.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:44:21.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.8817ms
+2024-06-19 13:44:21.403 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:44:21.523 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.376ms
+2024-06-19 13:45:18.334 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:45:18.402 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-19 13:45:18.405 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-19 13:45:18.405 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 401 0 null 71.0674ms
+2024-06-19 13:45:50.249 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:45:50.318 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:45:50.338 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:45:51.783 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:45:51.869 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:45:51.884 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:45:51.913 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:45:51.934 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:45:52.036 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:45:52.052 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 13:45:52.265 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:45:52.283 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 1942.0167ms
+2024-06-19 13:45:52.283 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:45:52.289 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 2040.02ms
+2024-06-19 13:49:24.418 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:49:24.710 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:49:24.710 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:49:24.712 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:49:24.712 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:49:24.712 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:49:25.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:49:25.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 201.1474ms
+2024-06-19 13:49:25.676 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:49:25.682 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.107ms
+2024-06-19 13:49:25.691 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:49:25.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.5106ms
+2024-06-19 13:49:25.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:49:25.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.1634ms
+2024-06-19 13:49:44.749 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:49:44.893 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:49:44.927 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:49:46.263 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:49:46.345 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:49:46.363 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:49:46.390 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:49:46.412 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:49:46.511 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:49:46.527 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 13:49:46.738 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:49:46.758 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 1827.4875ms
+2024-06-19 13:49:46.758 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:49:46.766 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 2017.6763ms
+2024-06-19 13:50:00.257 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:50:00.261 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:50:00.262 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:50:00.287 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:50:00.288 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:50:00.290 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:50:00.291 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:50:00.292 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:50:00.294 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:50:00.296 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 13:50:00.407 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:50:00.407 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 145.243ms
+2024-06-19 13:50:00.407 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:50:00.407 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 150.1136ms
+2024-06-19 13:50:29.897 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:50:29.906 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:50:29.907 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:50:29.971 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:50:29.976 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:50:29.978 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:50:29.979 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:50:29.980 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:50:29.982 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:50:29.984 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 13:50:30.005 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:50:30.005 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 97.9766ms
+2024-06-19 13:50:30.005 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:50:30.005 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 108.4713ms
+2024-06-19 13:50:51.673 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:50:51.818 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:50:51.818 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:50:51.819 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:50:51.819 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:50:51.819 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:50:52.229 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:50:52.366 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 137.9097ms
+2024-06-19 13:50:52.377 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:50:52.382 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.0366ms
+2024-06-19 13:50:52.396 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:50:52.420 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.1499ms
+2024-06-19 13:50:52.526 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:50:52.620 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.4667ms
+2024-06-19 13:51:18.230 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:51:18.298 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:51:18.313 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:51:19.284 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:51:19.341 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:51:19.354 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:51:19.378 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:51:19.398 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:51:19.478 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:51:19.488 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 13:51:19.645 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:51:19.660 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 1344.1946ms
+2024-06-19 13:51:19.660 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:51:19.665 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 1434.6532ms
+2024-06-19 13:54:08.256 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 13:54:08.394 +03:00 [INF] Now listening on: https://localhost:7014
+2024-06-19 13:54:08.394 +03:00 [INF] Now listening on: http://localhost:5281
+2024-06-19 13:54:08.395 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 13:54:08.395 +03:00 [INF] Hosting environment: Development
+2024-06-19 13:54:08.395 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-06-19 13:54:08.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-06-19 13:54:08.952 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 125.6481ms
+2024-06-19 13:54:08.963 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 13:54:08.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 3.2387ms
+2024-06-19 13:54:08.974 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-06-19 13:54:08.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.8018ms
+2024-06-19 13:54:09.095 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-06-19 13:54:09.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 108.1283ms
+2024-06-19 13:54:26.905 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:54:26.968 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:54:26.984 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:54:28.055 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:54:28.119 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:54:28.134 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:54:28.159 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:54:28.182 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:54:28.265 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:54:28.276 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 13:54:28.439 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:54:28.455 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 1468.3344ms
+2024-06-19 13:54:28.456 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:54:28.462 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 1556.4506ms
+2024-06-19 13:58:10.758 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 13:58:10.764 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:58:10.764 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 13:58:10.785 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 13:58:10.786 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 13:58:10.788 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 13:58:10.790 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 13:58:10.791 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 13:58:10.796 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 13:58:10.798 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 13:58:10.813 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 13:58:10.814 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 49.4395ms
+2024-06-19 13:58:10.814 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 13:58:10.814 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 56.0701ms
+2024-06-19 14:01:09.452 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - application/json 30
+2024-06-19 14:01:09.455 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 14:01:09.456 +03:00 [INF] Route matched with {action = "AcceptRequest", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AcceptRequest(RepairRequest.Application.Requests.Comands.AcceptRequest.AcceptRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-06-19 14:01:09.512 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-06-19 14:01:09.513 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Master'
+2024-06-19 14:01:09.515 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__master_Id_0='?' (DbType = Int32), @__masterRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__master_Id_0 AND [a].[RoleId] = @__masterRole_Id_1
+2024-06-19 14:01:09.517 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[LeadTime], [r].[MasterId], [r].[RequestStatusId], [r].[ServiceCenterId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-06-19 14:01:09.519 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Accepted'
+2024-06-19 14:01:09.522 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [LeadTime] = @p0, [MasterId] = @p1, [RequestStatusId] = @p2, [ServiceCenterId] = @p3, [StatusId] = @p4, [UserId] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+2024-06-19 14:01:09.523 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__repairRequest_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__repairRequest_UserId_0
+2024-06-19 14:01:09.537 +03:00 [INF] Executing OkObjectResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-06-19 14:01:09.537 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api) in 81.1818ms
+2024-06-19 14:01:09.537 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.AcceptRequest (RepairRequest.Api)'
+2024-06-19 14:01:09.538 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7014/repair-requests/accept-request - 200 null application/json; charset=utf-8 85.5623ms

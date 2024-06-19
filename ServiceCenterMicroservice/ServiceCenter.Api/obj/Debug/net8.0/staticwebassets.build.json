@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "zMaILoQMAoBFNgWpzwmaawtne3O6EQtyMvqlMlhyPHI=",
+  "Source": "ServiceCenter.Api",
+  "BasePath": "_content/ServiceCenter.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

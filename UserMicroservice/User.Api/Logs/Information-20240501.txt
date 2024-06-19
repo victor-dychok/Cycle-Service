@@ -1,0 +1,43 @@
+2024-05-01 16:17:08.534 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-01 16:17:09.722 +03:00 [INF] Now listening on: https://localhost:7276
+2024-05-01 16:17:09.723 +03:00 [INF] Now listening on: http://localhost:5195
+2024-05-01 16:17:09.843 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-01 16:17:09.843 +03:00 [INF] Hosting environment: Development
+2024-05-01 16:17:09.843 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\User.Api
+2024-05-01 16:17:13.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.html - null null
+2024-05-01 16:17:13.634 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.html - 200 null text/html;charset=utf-8 466.5438ms
+2024-05-01 16:17:13.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-01 16:17:13.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_vs/browserLink - null null
+2024-05-01 16:17:13.775 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 88.9906ms
+2024-05-01 16:17:14.019 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_vs/browserLink - 200 null text/javascript; charset=UTF-8 334.3734ms
+2024-05-01 16:17:14.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - null null
+2024-05-01 16:17:14.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 218.4427ms
+2024-05-01 16:23:13.312 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-01 16:23:13.755 +03:00 [INF] Now listening on: https://localhost:7276
+2024-05-01 16:23:13.755 +03:00 [INF] Now listening on: http://localhost:5195
+2024-05-01 16:23:13.791 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-01 16:23:13.792 +03:00 [INF] Hosting environment: Development
+2024-05-01 16:23:13.792 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\User.Api
+2024-05-01 16:23:16.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.html - null null
+2024-05-01 16:23:17.247 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.html - 200 null text/html;charset=utf-8 344.3282ms
+2024-05-01 16:23:17.313 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_vs/browserLink - null null
+2024-05-01 16:23:17.313 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-01 16:23:17.339 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 26.3305ms
+2024-05-01 16:23:17.495 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_vs/browserLink - 200 null text/javascript; charset=UTF-8 183.5016ms
+2024-05-01 16:23:17.605 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - null null
+2024-05-01 16:23:17.810 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 204.7732ms
+2024-05-01 16:23:54.085 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7276/users - application/json 88
+2024-05-01 16:23:55.866 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-01 16:23:55.874 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-01 16:23:55.874 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7276/users - 401 0 null 1789.3208ms
+2024-05-01 16:24:08.997 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7276/users - application/json 88
+2024-05-01 16:24:09.000 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-01 16:24:09.000 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-01 16:24:09.000 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7276/users - 401 0 null 3.7259ms
+2024-05-01 16:24:24.925 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7276/users - application/json 88
+2024-05-01 16:24:24.930 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-01 16:24:24.931 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-01 16:24:24.932 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7276/users - 401 0 null 6.3313ms

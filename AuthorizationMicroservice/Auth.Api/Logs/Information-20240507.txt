@@ -1,0 +1,719 @@
+2024-05-07 15:54:19.970 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 15:54:20.181 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 15:54:20.182 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 15:54:20.218 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 15:54:20.218 +03:00 [INF] Hosting environment: Development
+2024-05-07 15:54:20.218 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 15:54:21.398 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 15:54:21.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 234.1063ms
+2024-05-07 15:54:21.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 15:54:21.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 15:54:21.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.9571ms
+2024-05-07 15:54:21.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.0022ms
+2024-05-07 15:54:21.874 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 15:54:21.971 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.6857ms
+2024-05-07 15:54:34.114 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 15:54:35.176 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 15:54:35.204 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 15:54:38.211 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 15:54:38.342 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 3133.5626ms
+2024-05-07 15:54:38.344 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 15:54:38.349 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Common.Application.Services.Exeptions.NotFoundExeption: Not found by filter: "No user with login: admin"
+   at Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenRequestHandler.Handle(CreateJwtTokenComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Authorization.Application\Requests\Comands\CreateJwtToken\CreateJwtTokenRequestHandler.cs:line 45
+   at UserAPI.Controllers.AuthController.Post(CreateJwtTokenComand comand, IMediator mediator, CancellationToken cancellation) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api\Controllers\AuthController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-07 15:54:38.445 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 500 null text/plain; charset=utf-8 4331.7231ms
+2024-05-07 15:57:43.825 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 15:57:44.055 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 15:57:44.056 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 15:57:44.090 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 15:57:44.091 +03:00 [INF] Hosting environment: Development
+2024-05-07 15:57:44.091 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 15:57:45.273 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 15:57:45.476 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 209.4082ms
+2024-05-07 15:57:45.509 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 15:57:45.509 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 15:57:45.515 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.9838ms
+2024-05-07 15:57:45.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.3584ms
+2024-05-07 15:57:45.765 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 15:57:45.911 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 146.9367ms
+2024-05-07 15:57:58.471 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 15:57:58.536 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 15:57:58.557 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 15:57:59.719 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 15:57:59.939 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 15:57:59.962 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 15:57:59.973 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 15:58:00.145 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 15:58:00.175 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Authorization.Percistance.AppDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'RefreshTokens'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2312aea4-9d20-441b-92ee-25cd291f94f5
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'RefreshTokens'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2312aea4-9d20-441b-92ee-25cd291f94f5
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-05-07 15:58:00.339 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1779.2258ms
+2024-05-07 15:58:00.340 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 15:58:00.344 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'RefreshTokens'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2312aea4-9d20-441b-92ee-25cd291f94f5
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Authorization.Percistance.SqlServerBaseReository`1.AddAsync(TEntity item, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Authorization.Percistance\SqlServerBaseReository.cs:line 32
+   at Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenRequestHandler.Handle(CreateJwtTokenComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Authorization.Application\Requests\Comands\CreateJwtToken\CreateJwtTokenRequestHandler.cs:line 71
+   at UserAPI.Controllers.AuthController.Post(CreateJwtTokenComand comand, IMediator mediator, CancellationToken cancellation) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api\Controllers\AuthController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-07 15:58:00.365 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 500 null text/plain; charset=utf-8 1894.7391ms
+2024-05-07 16:02:17.952 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 16:02:18.304 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 16:02:18.305 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 16:02:18.373 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 16:02:18.374 +03:00 [INF] Hosting environment: Development
+2024-05-07 16:02:18.374 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 16:02:19.628 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 16:02:19.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 209.259ms
+2024-05-07 16:02:19.860 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 16:02:19.860 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 16:02:19.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 8.6147ms
+2024-05-07 16:02:19.904 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.3214ms
+2024-05-07 16:02:19.973 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 16:02:20.074 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.1175ms
+2024-05-07 16:02:30.534 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 16:02:30.598 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:02:30.617 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 16:02:31.809 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 16:02:31.923 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 16:02:31.944 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:02:31.955 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:02:32.075 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 16:02:32.099 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 16:02:32.108 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1488.6329ms
+2024-05-07 16:02:32.108 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:02:32.115 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1580.4323ms
+2024-05-07 16:21:32.601 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 16:21:32.939 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 16:21:32.939 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 16:21:32.976 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 16:21:32.976 +03:00 [INF] Hosting environment: Development
+2024-05-07 16:21:32.976 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 16:21:34.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 16:21:34.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 206.9637ms
+2024-05-07 16:21:34.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 16:21:34.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 16:21:34.549 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 11.5752ms
+2024-05-07 16:21:34.578 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.4998ms
+2024-05-07 16:21:34.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 16:21:34.748 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.0125ms
+2024-05-07 16:21:55.752 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 16:21:55.828 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:21:55.847 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 16:21:57.040 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 16:21:57.151 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 16:21:57.173 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:21:57.184 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:21:57.301 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 16:21:57.326 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 16:21:57.337 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1487.1737ms
+2024-05-07 16:21:57.338 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:21:57.345 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1593.0378ms
+2024-05-07 16:23:39.320 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 16:23:39.706 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 16:23:39.707 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 16:23:39.803 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 16:23:39.804 +03:00 [INF] Hosting environment: Development
+2024-05-07 16:23:39.804 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 16:23:41.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 16:23:41.283 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 204.5166ms
+2024-05-07 16:23:41.311 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 16:23:41.311 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 16:23:41.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 11.2723ms
+2024-05-07 16:23:41.357 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.2706ms
+2024-05-07 16:23:41.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 16:23:41.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 100.4032ms
+2024-05-07 16:23:55.246 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 16:23:55.315 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:23:55.334 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 16:23:56.538 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 16:23:56.648 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 16:23:56.669 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:23:56.681 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:23:56.797 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 16:23:56.822 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 16:23:56.830 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1493.0353ms
+2024-05-07 16:23:56.830 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:23:56.838 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1592.6953ms
+2024-05-07 16:31:18.932 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 16:31:19.329 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 16:31:19.329 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 16:31:19.416 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 16:31:19.417 +03:00 [INF] Hosting environment: Development
+2024-05-07 16:31:19.417 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 16:31:20.984 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 16:31:21.222 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 246.6424ms
+2024-05-07 16:31:21.248 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 16:31:21.248 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 16:31:21.253 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.0146ms
+2024-05-07 16:31:21.287 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.891ms
+2024-05-07 16:31:21.353 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 16:31:21.466 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.6851ms
+2024-05-07 16:31:38.259 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/RefreshJwtToken?jwtToken=F59CC83B-BF44-4101-9C25-14DFAA2AD201 - null 0
+2024-05-07 16:31:38.324 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:31:38.343 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(System.String, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 16:31:39.561 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@__request_RefreshToken_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[UserId]
+FROM [RefreshTokens] AS [r]
+WHERE [r].[Id] = @__request_RefreshToken_0
+2024-05-07 16:31:39.624 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__currentRefreshToken_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentRefreshToken_UserId_0
+2024-05-07 16:31:39.690 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__user_Login_0
+2024-05-07 16:31:39.707 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:31:39.715 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:31:39.823 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 16:31:39.849 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 16:31:39.858 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1512.7858ms
+2024-05-07 16:31:39.859 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:31:39.865 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/RefreshJwtToken?jwtToken=F59CC83B-BF44-4101-9C25-14DFAA2AD201 - 200 null application/json; charset=utf-8 1606.1692ms
+2024-05-07 16:36:36.272 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 16:36:36.603 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 16:36:36.603 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 16:36:36.669 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 16:36:36.670 +03:00 [INF] Hosting environment: Development
+2024-05-07 16:36:36.670 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 16:36:37.864 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 16:36:38.080 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 225.4378ms
+2024-05-07 16:36:38.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 16:36:38.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 16:36:38.114 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.5158ms
+2024-05-07 16:36:38.148 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.761ms
+2024-05-07 16:36:38.225 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 16:36:38.314 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.3095ms
+2024-05-07 16:36:48.943 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 16:36:49.012 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:36:49.035 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 16:36:50.225 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 16:36:50.343 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 16:36:50.373 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:36:50.385 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 16:36:50.505 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 16:36:50.528 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 16:36:50.536 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1497.7511ms
+2024-05-07 16:36:50.536 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 16:36:50.545 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1602.1903ms
+2024-05-07 17:04:12.329 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 17:04:12.623 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 17:04:12.624 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 17:04:12.678 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 17:04:12.679 +03:00 [INF] Hosting environment: Development
+2024-05-07 17:04:12.679 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 17:04:13.821 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 17:04:14.050 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 239.2743ms
+2024-05-07 17:04:14.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 17:04:14.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 17:04:14.086 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 7.7239ms
+2024-05-07 17:04:14.128 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.4104ms
+2024-05-07 17:04:14.206 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 17:04:14.307 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.1641ms
+2024-05-07 17:04:25.778 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 17:04:25.848 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 17:04:25.868 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 17:04:27.073 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 17:04:27.198 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 17:04:27.228 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 17:04:27.243 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 17:04:27.372 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 17:04:27.397 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 17:04:27.406 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1535.0738ms
+2024-05-07 17:04:27.407 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 17:04:27.416 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1637.6707ms
+2024-05-07 17:15:32.977 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 17:15:33.390 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 17:15:33.390 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 17:15:33.429 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 17:15:33.430 +03:00 [INF] Hosting environment: Development
+2024-05-07 17:15:33.430 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 17:15:34.711 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 17:15:34.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 275.8278ms
+2024-05-07 17:15:35.035 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 17:15:35.035 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 17:15:35.041 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 6.7199ms
+2024-05-07 17:15:35.096 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.6562ms
+2024-05-07 17:15:35.198 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 17:15:35.380 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 182.9071ms
+2024-05-07 17:15:46.195 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 17:15:46.305 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 17:15:46.326 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 17:15:47.589 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 17:15:47.731 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 17:15:47.762 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 17:15:47.786 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 17:15:47.947 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 17:15:47.983 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 17:15:47.991 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1663.314ms
+2024-05-07 17:15:47.992 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 17:15:48.003 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1807.9921ms
+2024-05-07 17:50:37.026 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 17:50:37.348 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 17:50:37.348 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 17:50:37.411 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 17:50:37.411 +03:00 [INF] Hosting environment: Development
+2024-05-07 17:50:37.412 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 17:50:38.775 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 17:50:39.016 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 249.0058ms
+2024-05-07 17:50:39.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 17:50:39.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 17:50:39.056 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 9.0313ms
+2024-05-07 17:50:39.095 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.7715ms
+2024-05-07 17:50:39.174 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 17:50:39.283 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.5745ms
+2024-05-07 17:50:50.779 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 17:50:50.853 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 17:50:50.873 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 17:50:52.120 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 17:50:52.232 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 17:50:52.261 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 17:50:52.275 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 17:50:52.402 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 17:50:52.427 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 17:50:52.436 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1559.6387ms
+2024-05-07 17:50:52.436 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 17:50:52.445 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1666.6313ms
+2024-05-07 18:00:45.183 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 18:00:45.398 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 18:00:45.398 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 18:00:45.453 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 18:00:45.454 +03:00 [INF] Hosting environment: Development
+2024-05-07 18:00:45.454 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 18:00:46.481 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 18:00:46.702 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 226.2438ms
+2024-05-07 18:00:46.733 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 18:00:46.733 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 18:00:46.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 12.5441ms
+2024-05-07 18:00:46.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.1673ms
+2024-05-07 18:00:46.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 18:00:46.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.3385ms
+2024-05-07 18:00:59.443 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 18:01:00.454 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:01:00.473 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 18:01:03.073 +03:00 [INF] Executed DbCommand (76ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 18:01:03.187 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 18:01:03.210 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:01:03.221 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:01:03.371 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 18:01:03.402 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 18:01:03.411 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 2935.2777ms
+2024-05-07 18:01:03.411 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:01:03.418 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 3975.1036ms
+2024-05-07 18:14:07.589 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 18:14:07.993 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 18:14:07.993 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 18:14:08.044 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 18:14:08.045 +03:00 [INF] Hosting environment: Development
+2024-05-07 18:14:08.045 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 18:14:08.905 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 18:14:09.104 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 207.0076ms
+2024-05-07 18:14:09.136 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 18:14:09.136 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 18:14:09.141 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.0599ms
+2024-05-07 18:14:09.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.5374ms
+2024-05-07 18:14:09.259 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 18:14:09.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.9863ms
+2024-05-07 18:14:21.878 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - application/json 48
+2024-05-07 18:14:21.957 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:14:21.977 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 18:14:23.172 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-05-07 18:14:23.297 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-05-07 18:14:23.321 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:14:23.332 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:14:23.455 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 18:14:23.486 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 18:14:23.495 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1515.1304ms
+2024-05-07 18:14:23.496 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:14:23.503 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 1624.4996ms
+2024-05-07 18:18:23.510 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 18:18:23.927 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 18:18:23.927 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 18:18:23.967 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 18:18:23.968 +03:00 [INF] Hosting environment: Development
+2024-05-07 18:18:23.968 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 18:18:25.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 18:18:25.266 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 224.1899ms
+2024-05-07 18:18:25.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 18:18:25.309 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 18:18:25.323 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 13.4854ms
+2024-05-07 18:18:25.361 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.4333ms
+2024-05-07 18:18:25.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 18:18:25.519 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.5409ms
+2024-05-07 18:18:36.231 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/RefreshJwtToken?jwtToken=F59CC83B-BF44-4101-9C25-14DFAA2AD201 - null 0
+2024-05-07 18:18:36.297 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:18:36.316 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(System.String, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 18:18:37.520 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__request_RefreshToken_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[UserId]
+FROM [RefreshTokens] AS [r]
+WHERE [r].[Id] = @__request_RefreshToken_0
+2024-05-07 18:18:37.583 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__currentRefreshToken_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentRefreshToken_UserId_0
+2024-05-07 18:18:37.646 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__user_Login_0
+2024-05-07 18:18:37.661 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:18:37.670 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:18:37.782 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 18:18:37.807 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 18:18:37.815 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1496.9138ms
+2024-05-07 18:18:37.816 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:18:37.823 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/RefreshJwtToken?jwtToken=F59CC83B-BF44-4101-9C25-14DFAA2AD201 - 200 null application/json; charset=utf-8 1592.1558ms
+2024-05-07 18:19:48.547 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-07 18:19:48.956 +03:00 [INF] Now listening on: https://localhost:7104
+2024-05-07 18:19:48.957 +03:00 [INF] Now listening on: http://localhost:5148
+2024-05-07 18:19:49.007 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-07 18:19:49.007 +03:00 [INF] Hosting environment: Development
+2024-05-07 18:19:49.008 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-05-07 18:19:50.113 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-05-07 18:19:50.321 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 212.7965ms
+2024-05-07 18:19:50.355 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-07 18:19:50.355 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-05-07 18:19:50.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 18.7672ms
+2024-05-07 18:19:50.412 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.2568ms
+2024-05-07 18:19:50.489 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-05-07 18:19:50.606 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.3027ms
+2024-05-07 18:19:55.849 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7104/Auth/RefreshJwtToken?jwtToken=F59CC83B-BF44-4101-9C25-14DFAA2AD201 - null 0
+2024-05-07 18:19:55.923 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:19:55.942 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(System.String, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-05-07 18:19:57.120 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@__request_RefreshToken_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[UserId]
+FROM [RefreshTokens] AS [r]
+WHERE [r].[Id] = @__request_RefreshToken_0
+2024-05-07 18:19:57.183 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__currentRefreshToken_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__currentRefreshToken_UserId_0
+2024-05-07 18:19:57.246 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__user_Login_0
+2024-05-07 18:19:57.262 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:19:57.270 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-05-07 18:19:57.382 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-05-07 18:19:57.410 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-05-07 18:19:57.418 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 1473.4466ms
+2024-05-07 18:19:57.419 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-05-07 18:19:57.425 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7104/Auth/RefreshJwtToken?jwtToken=F59CC83B-BF44-4101-9C25-14DFAA2AD201 - 200 null application/json; charset=utf-8 1576.2167ms

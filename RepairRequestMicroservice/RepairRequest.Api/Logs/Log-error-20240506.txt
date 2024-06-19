@@ -1,0 +1,23 @@
+2024-05-06 18:23:04.963 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RepairRequest.Service.Exeptions.NotFoundExeption: Not found by filter: {"Id":2}
+   at RepairRequest.Application.Query.GetById.GetByIdOrDefaultQueryHandler.Handle(GetByIdQuery request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Requests\Query\GetById\GetByIdOrDefaultQueryHandler.cs:line 41
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

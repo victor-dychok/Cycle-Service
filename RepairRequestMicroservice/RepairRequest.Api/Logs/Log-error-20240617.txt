@@ -1,0 +1,4 @@
+2024-06-17 15:08:58.167 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ServicesCenters] ADD CONSTRAINT [FK_ServicesCenters_Users_AdminId] FOREIGN KEY ([AdminId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE;
+2024-06-17 15:10:43.483 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ServicesCenters] ADD CONSTRAINT [FK_ServicesCenters_Users_AdminId] FOREIGN KEY ([AdminId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE;

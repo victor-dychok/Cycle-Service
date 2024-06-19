@@ -1,0 +1,31 @@
+2024-06-12 20:06:56.394 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-12 20:06:56.594 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-12 20:06:56.606 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-12 20:06:56.611 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-12 20:06:56.627 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-12 20:06:56.628 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-12 20:06:56.628 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-12 20:06:56.628 +03:00 [INF] Hosting environment: Development
+2024-06-12 20:06:56.628 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-12 20:06:57.613 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger - null null
+2024-06-12 20:06:57.817 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger - 301 0 null 206.24ms
+2024-06-12 20:06:57.822 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-12 20:06:57.889 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 67.0849ms
+2024-06-12 20:06:57.893 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui.css - null null
+2024-06-12 20:06:57.894 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-bundle.js - null null
+2024-06-12 20:06:57.894 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-standalone-preset.js - null null
+2024-06-12 20:06:57.901 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-12 20:06:57.903 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.4304ms
+2024-06-12 20:06:57.911 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-12 20:06:57.961 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-06-12 20:06:57.962 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui.css - 200 143943 text/css 68.3201ms
+2024-06-12 20:06:58.019 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.4721ms
+2024-06-12 20:06:58.023 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-06-12 20:06:58.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 128.6124ms
+2024-06-12 20:06:58.081 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-06-12 20:06:58.082 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 187.7692ms
+2024-06-12 20:06:58.271 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-12 20:06:58.291 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/favicon-32x32.png - null null
+2024-06-12 20:06:58.291 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-06-12 20:06:58.291 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/favicon-32x32.png - 200 628 image/png 0.7311ms
+2024-06-12 20:06:58.357 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.6082ms

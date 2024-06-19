@@ -1,0 +1,62 @@
+2024-06-18 09:55:08.406 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-18 09:55:08.557 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-18 09:55:08.566 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-18 09:55:08.571 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-18 09:55:08.583 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-18 09:55:08.583 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-18 09:55:08.583 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-18 09:55:08.583 +03:00 [INF] Hosting environment: Development
+2024-06-18 09:55:08.583 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-18 09:55:09.223 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-18 09:55:09.470 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 251.5273ms
+2024-06-18 09:55:09.475 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-18 09:55:09.477 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.1367ms
+2024-06-18 09:55:09.489 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-18 09:55:09.515 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.8935ms
+2024-06-18 09:55:09.613 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-18 09:55:09.692 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.5259ms
+2024-06-18 09:56:00.561 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-18 09:56:00.733 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-18 09:56:00.742 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-18 09:56:00.747 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-18 09:56:00.760 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-18 09:56:00.760 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-18 09:56:00.761 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-18 09:56:00.761 +03:00 [INF] Hosting environment: Development
+2024-06-18 09:56:00.761 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-18 09:56:01.239 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-18 09:56:01.445 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 210.2211ms
+2024-06-18 09:56:01.453 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-18 09:56:01.456 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.1051ms
+2024-06-18 09:56:01.465 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-18 09:56:01.490 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.5476ms
+2024-06-18 09:56:01.596 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-18 09:56:01.684 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.7356ms
+2024-06-18 09:56:33.082 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5234/users?Login=vitek&Password=qwerty12345&Phone=%2B375291615635&Email=vitia%40gmail.com - null 0
+2024-06-18 09:56:33.087 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-18 09:56:33.925 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-18 09:56:33.949 +03:00 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Users.Application.Comands.CreateUser.CreateUserComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-18 09:56:36.606 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-18 09:56:36.756 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 50), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Login], [PasswordHash], [Phone])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-06-18 09:56:36.784 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Client'
+2024-06-18 09:56:36.818 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserAppRole] ([RoleId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-18 09:56:36.845 +03:00 [INF] Executing CreatedResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-18 09:56:36.853 +03:00 [INF] Executed action User.Api.Controllers.UserController.Post (User.Api) in 2901.9063ms
+2024-06-18 09:56:36.854 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-18 09:56:36.860 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5234/users?Login=vitek&Password=qwerty12345&Phone=%2B375291615635&Email=vitia%40gmail.com - 201 null application/json; charset=utf-8 3778.754ms

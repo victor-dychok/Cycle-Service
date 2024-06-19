@@ -1,0 +1,626 @@
+2024-05-08 13:17:01.307 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 13:17:01.703 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 13:17:01.703 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 13:17:01.754 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 13:17:01.756 +03:00 [INF] Hosting environment: Development
+2024-05-08 13:17:01.756 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 13:17:04.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 13:17:04.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 268.5793ms
+2024-05-08 13:17:04.618 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 13:17:04.618 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 13:17:04.623 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.2283ms
+2024-05-08 13:17:04.717 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.7241ms
+2024-05-08 13:17:04.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 13:17:04.951 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 123.3256ms
+2024-05-08 13:17:26.901 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 13:17:28.589 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:17:28.618 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:17:32.858 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 13:17:32.997 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 13:17:33.005 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 13:17:33.014 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 4393.2972ms
+2024-05-08 13:17:33.015 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:17:33.021 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 6122.0631ms
+2024-05-08 13:17:47.670 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7014/repair-requests - application/json 34
+2024-05-08 13:17:47.698 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Post (RepairRequest.Api)'
+2024-05-08 13:17:47.704 +03:00 [INF] Route matched with {action = "Post", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(RepairRequest.Application.Comands.CreateRequest.CreateRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:17:47.906 +03:00 [INF] Executed DbCommand (130ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_UserId_0
+2024-05-08 13:17:47.927 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-05-08 13:17:48.050 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__master_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [AppUserRole] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__master_Id_0 AND [a0].[Name] = N'Master'
+2024-05-08 13:17:48.075 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [AppUserRole] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__user_Id_0 AND [a0].[Name] = N'Client'
+2024-05-08 13:17:58.253 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Issued'
+2024-05-08 13:17:58.437 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([MasterId], [RequestStatusId], [StatusId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-08 13:17:58.471 +03:00 [INF] Executing CreatedResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-05-08 13:17:58.481 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.Post (RepairRequest.Api) in 10776.8519ms
+2024-05-08 13:17:58.482 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Post (RepairRequest.Api)'
+2024-05-08 13:17:58.484 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.AppUserAppRoles.User.Id.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-08 13:17:58.566 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7014/repair-requests - 500 null text/plain; charset=utf-8 10895.8088ms
+2024-05-08 13:19:12.497 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 13:19:13.244 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 13:19:13.244 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 13:19:13.331 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 13:19:13.331 +03:00 [INF] Hosting environment: Development
+2024-05-08 13:19:13.331 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 13:19:15.761 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 13:19:16.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 426.4067ms
+2024-05-08 13:19:16.225 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 13:19:16.225 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 13:19:16.244 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 18.9647ms
+2024-05-08 13:19:16.347 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 122.7522ms
+2024-05-08 13:19:16.411 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 13:19:16.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 164.0476ms
+2024-05-08 13:19:30.161 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 13:19:30.402 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:19:30.441 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:19:32.386 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 13:19:32.489 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 13:19:32.511 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 13:19:32.531 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 2086.3587ms
+2024-05-08 13:19:32.532 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:19:32.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 2380.3885ms
+2024-05-08 13:19:49.368 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7014/repair-requests - application/json 34
+2024-05-08 13:19:49.386 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Post (RepairRequest.Api)'
+2024-05-08 13:19:49.390 +03:00 [INF] Route matched with {action = "Post", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(RepairRequest.Application.Comands.CreateRequest.CreateRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:19:49.556 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_UserId_0
+2024-05-08 13:19:49.603 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-05-08 13:19:49.690 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [AppUserRole] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__master_Id_0 AND [a0].[Name] = N'Master'
+2024-05-08 13:19:49.708 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [AppUserRole] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__user_Id_0 AND [a0].[Name] = N'Client'
+2024-05-08 13:20:17.889 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Issued'
+2024-05-08 13:20:33.159 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([MasterId], [RequestStatusId], [StatusId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-08 13:20:54.633 +03:00 [INF] Executing CreatedResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-05-08 13:21:37.876 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 13:21:38.211 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 13:21:38.211 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 13:21:38.260 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 13:21:38.261 +03:00 [INF] Hosting environment: Development
+2024-05-08 13:21:38.261 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 13:21:40.936 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 13:21:41.154 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 240.1802ms
+2024-05-08 13:21:41.211 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 13:21:41.211 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 13:21:41.227 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 17.9208ms
+2024-05-08 13:21:41.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 139.3511ms
+2024-05-08 13:21:41.406 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 13:21:41.538 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.1272ms
+2024-05-08 13:22:02.017 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7014/repair-requests - application/json 34
+2024-05-08 13:22:02.271 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Post (RepairRequest.Api)'
+2024-05-08 13:22:02.292 +03:00 [INF] Route matched with {action = "Post", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(RepairRequest.Application.Comands.CreateRequest.CreateRequestComand, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:22:04.481 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[@__request_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_UserId_0
+2024-05-08 13:22:04.608 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__request_MasterId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_MasterId_0
+2024-05-08 13:22:04.662 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__master_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [AppUserRole] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__master_Id_0 AND [a0].[Name] = N'Master'
+2024-05-08 13:22:04.692 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [AppUserRole] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__user_Id_0 AND [a0].[Name] = N'Client'
+2024-05-08 13:22:09.814 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Issued'
+2024-05-08 13:22:10.039 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Requests] ([MasterId], [RequestStatusId], [StatusId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-05-08 13:22:10.100 +03:00 [INF] Executing CreatedResult, writing value of type 'RepairRequest.Application.dto.GetRequestsDTO'.
+2024-05-08 13:22:10.119 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.Post (RepairRequest.Api) in 7816.9669ms
+2024-05-08 13:22:10.122 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Post (RepairRequest.Api)'
+2024-05-08 13:22:10.147 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7014/repair-requests - 201 null application/json; charset=utf-8 8130.3216ms
+2024-05-08 13:22:20.162 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 13:22:20.173 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:22:20.181 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:22:20.241 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 13:22:20.281 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 13:22:20.292 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 13:22:20.293 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 112.2907ms
+2024-05-08 13:22:20.294 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:22:20.294 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 132.3501ms
+2024-05-08 13:22:47.096 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7014/repair-requests/6 - null null
+2024-05-08 13:22:47.122 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 13:22:47.124 +03:00 [INF] Route matched with {action = "Delete", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, MediatR.IMediator) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:22:47.248 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api) in 124.1589ms
+2024-05-08 13:22:47.249 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 13:22:47.251 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'FluentValidation.IValidator`1[RepairRequest.Application.Comands.DeleteRequest.DeleteRepairRequestComand]' while attempting to activate 'RepairRequest.Application.Behaviors.ValidationBehavior`2[RepairRequest.Application.Comands.DeleteRequest.DeleteRepairRequestComand,System.Boolean]'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateOpenGeneric(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot, Boolean throwOnConstraintViolation)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateEnumerable(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at RepairRequest.Api.Controllers.RepairRequestController.Delete(Int32 id, IMediator mediator) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-08 13:22:47.306 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7014/repair-requests/6 - 500 null text/plain; charset=utf-8 211.5482ms
+2024-05-08 13:25:48.135 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 13:25:48.704 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 13:25:48.704 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 13:25:48.752 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 13:25:48.753 +03:00 [INF] Hosting environment: Development
+2024-05-08 13:25:48.754 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 13:25:51.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 13:25:51.959 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 236.7807ms
+2024-05-08 13:25:52.009 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 13:25:52.012 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 13:25:52.013 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.5992ms
+2024-05-08 13:25:52.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 173.6681ms
+2024-05-08 13:25:52.255 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 13:25:52.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 134.1057ms
+2024-05-08 13:26:07.908 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 13:26:08.097 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:26:08.163 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:26:10.307 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 13:26:10.446 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 13:26:10.485 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 13:26:10.526 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 2352.2933ms
+2024-05-08 13:26:10.528 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:26:10.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 2632.9039ms
+2024-05-08 13:26:19.270 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7014/repair-requests/6 - null null
+2024-05-08 13:26:19.277 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 13:26:19.291 +03:00 [INF] Route matched with {action = "Delete", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, MediatR.IMediator) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:26:19.407 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-05-08 13:26:19.571 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Requests]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-05-08 13:26:19.581 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2024-05-08 13:26:19.583 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api) in 292.1211ms
+2024-05-08 13:26:19.583 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 13:26:19.584 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7014/repair-requests/6 - 200 null application/json; charset=utf-8 313.8846ms
+2024-05-08 13:26:25.068 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7014/repair-requests/7 - null null
+2024-05-08 13:26:25.079 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 13:26:25.081 +03:00 [INF] Route matched with {action = "Delete", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, MediatR.IMediator) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:26:25.162 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-05-08 13:26:25.173 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Requests]
+OUTPUT 1
+WHERE [Id] = @p0;
+2024-05-08 13:26:25.175 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2024-05-08 13:26:25.176 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api) in 94.0354ms
+2024-05-08 13:26:25.176 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 13:26:25.177 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7014/repair-requests/7 - 200 null application/json; charset=utf-8 110.2181ms
+2024-05-08 13:26:32.272 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 13:26:32.273 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:26:32.273 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 13:26:32.287 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 13:26:32.304 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 13:26:32.305 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 13:26:32.305 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 32.246ms
+2024-05-08 13:26:32.305 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 13:26:32.305 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 33.7072ms
+2024-05-08 16:08:44.332 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 16:08:44.661 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 16:08:44.661 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 16:08:44.752 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 16:08:44.753 +03:00 [INF] Hosting environment: Development
+2024-05-08 16:08:44.753 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 16:08:46.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 16:08:46.268 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 219.4587ms
+2024-05-08 16:08:46.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 16:08:46.295 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 16:08:46.300 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.8914ms
+2024-05-08 16:08:46.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.0328ms
+2024-05-08 16:08:46.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 16:08:46.584 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 161.7893ms
+2024-05-08 16:08:56.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 16:08:57.188 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:08:57.212 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 16:08:59.615 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 16:08:59.721 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 16:08:59.731 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 16:08:59.742 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 2526.8889ms
+2024-05-08 16:08:59.742 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:08:59.748 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 2880.3171ms
+2024-05-08 16:09:17.684 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7014/repair-requests/5 - null null
+2024-05-08 16:09:17.692 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 16:09:17.699 +03:00 [INF] Route matched with {action = "Delete", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, MediatR.IMediator) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 16:09:17.784 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-05-08 16:09:17.791 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-05-08 16:09:18.142 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api) in 443.012ms
+2024-05-08 16:09:18.143 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 16:09:18.147 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+RepairRequest.Service.Exeptions.ForbidenExeption: Access denied
+   at RepairRequest.Application.Comands.DeleteRequest.DeleteRequestComandHandler.Handle(DeleteRepairRequestComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Requests\Comands\DeleteRequest\DeleteRequestComandHandler.cs:line 60
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 20
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 27
+   at RepairRequest.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ContextTransactionBehavior.cs:line 29
+   at RepairRequest.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequest.Application\Behaviors\ValidationBehavior.cs:line 24
+   at RepairRequest.Api.Controllers.RepairRequestController.Delete(Int32 id, IMediator mediator) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\Controllers\RepairRequestController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-05-08 16:09:18.217 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7014/repair-requests/5 - 500 null text/plain; charset=utf-8 533.7074ms
+2024-05-08 16:09:54.188 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 16:09:54.448 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 16:09:54.448 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 16:09:54.505 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 16:09:54.506 +03:00 [INF] Hosting environment: Development
+2024-05-08 16:09:54.506 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 16:09:55.525 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 16:09:55.768 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 259.0836ms
+2024-05-08 16:09:55.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 16:09:55.812 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 16:09:55.818 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.5708ms
+2024-05-08 16:09:55.872 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.3256ms
+2024-05-08 16:09:55.971 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 16:09:56.145 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 173.8396ms
+2024-05-08 16:10:11.041 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 16:10:11.156 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:10:11.180 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 16:10:12.385 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 16:10:12.471 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 16:10:12.482 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 16:10:12.494 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 1311.1738ms
+2024-05-08 16:10:12.494 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:10:12.500 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 1459.2514ms
+2024-05-08 16:10:18.387 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7014/repair-requests/5 - null null
+2024-05-08 16:10:18.393 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 16:10:18.396 +03:00 [INF] Route matched with {action = "Delete", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, MediatR.IMediator) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 16:10:18.461 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-05-08 16:10:18.466 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+WHERE [r].[Id] = @__request_Id_0
+2024-05-08 16:10:18.473 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[StatusName]
+FROM [RequestStatuses] AS [r]
+WHERE [r].[StatusName] = N'Сanceled by client'
+2024-05-08 16:10:18.587 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Requests] SET [MasterId] = @p0, [RequestStatusId] = @p1, [StatusId] = @p2, [UserId] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2024-05-08 16:10:18.595 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-08 16:10:18.595 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api) in 198.7137ms
+2024-05-08 16:10:18.595 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.Delete (RepairRequest.Api)'
+2024-05-08 16:10:18.596 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7014/repair-requests/5 - 200 null text/plain; charset=utf-8 208.819ms
+2024-05-08 16:10:24.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 16:10:24.107 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:10:24.108 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 16:10:24.176 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 16:10:24.179 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 16:10:24.179 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 16:10:24.180 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 71.6358ms
+2024-05-08 16:10:24.180 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:10:24.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 77.492ms
+2024-05-08 16:12:14.476 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 16:12:14.720 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 16:12:14.721 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 16:12:14.759 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 16:12:14.760 +03:00 [INF] Hosting environment: Development
+2024-05-08 16:12:14.760 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 16:12:15.826 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 16:12:16.031 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 213.225ms
+2024-05-08 16:12:16.070 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 16:12:16.070 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 16:12:16.078 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.561ms
+2024-05-08 16:12:16.129 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.8829ms
+2024-05-08 16:12:16.347 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 16:12:16.453 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.7481ms
+2024-05-08 16:12:27.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/repair-requests - null null
+2024-05-08 16:12:27.970 +03:00 [INF] Executing endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:12:27.995 +03:00 [INF] Route matched with {action = "GetAll", controller = "RepairRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(RepairRequest.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller RepairRequest.Api.Controllers.RepairRequestController (RepairRequest.Api).
+2024-05-08 16:12:29.335 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+ORDER BY [r].[Id]
+2024-05-08 16:12:29.425 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[MasterId], [r].[RequestStatusId], [r].[StatusId], [r].[UserId]
+FROM [Requests] AS [r]
+2024-05-08 16:12:29.433 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RepairRequest.Application.dto.GetRequestsDTO, RepairRequest.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-05-08 16:12:29.443 +03:00 [INF] Executed action RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api) in 1444.5267ms
+2024-05-08 16:12:29.443 +03:00 [INF] Executed endpoint 'RepairRequest.Api.Controllers.RepairRequestController.GetAll (RepairRequest.Api)'
+2024-05-08 16:12:29.449 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/repair-requests - 200 null application/json; charset=utf-8 1597.4402ms
+2024-05-08 16:28:32.343 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 16:28:32.933 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 16:28:32.934 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 16:28:32.972 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 16:28:32.972 +03:00 [INF] Hosting environment: Development
+2024-05-08 16:28:32.973 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 16:28:34.143 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 16:28:34.361 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 227.5133ms
+2024-05-08 16:28:34.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 16:28:34.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 16:28:34.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.1747ms
+2024-05-08 16:28:34.424 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.2218ms
+2024-05-08 16:28:34.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 16:28:34.715 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 103.173ms
+2024-05-08 16:59:02.636 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-08 16:59:02.680 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-08 16:59:02.682 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-05-08 16:59:02.683 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-05-08 16:59:02.700 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-05-08 16:59:02.710 +03:00 [INF] Applying migration '20240508135824_Service-ServiceCenter-Relation'.
+2024-05-08 16:59:02.759 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Services] ADD [ServiceCenterId] int NOT NULL DEFAULT 0;
+2024-05-08 16:59:02.761 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Services_ServiceCenterId] ON [Services] ([ServiceCenterId]);
+2024-05-08 16:59:02.761 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Services] ADD CONSTRAINT [FK_Services_ServicesCenters_ServiceCenterId] FOREIGN KEY ([ServiceCenterId]) REFERENCES [ServicesCenters] ([Id]) ON DELETE CASCADE;
+2024-05-08 16:59:02.763 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240508135824_Service-ServiceCenter-Relation', N'8.0.4');
+2024-05-08 17:05:51.868 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 17:05:52.114 +03:00 [INF] Now listening on: https://localhost:7014
+2024-05-08 17:05:52.114 +03:00 [INF] Now listening on: http://localhost:5281
+2024-05-08 17:05:52.166 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 17:05:52.166 +03:00 [INF] Hosting environment: Development
+2024-05-08 17:05:52.166 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api
+2024-05-08 17:05:54.099 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/index.html - null null
+2024-05-08 17:05:54.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/index.html - 200 null text/html;charset=utf-8 288.7087ms
+2024-05-08 17:05:54.432 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-08 17:05:54.432 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/_vs/browserLink - null null
+2024-05-08 17:05:54.450 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 17.7097ms
+2024-05-08 17:05:54.743 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/_vs/browserLink - 200 null text/javascript; charset=UTF-8 310.6349ms
+2024-05-08 17:05:54.832 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - null null
+2024-05-08 17:05:54.964 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7014/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 132.3069ms

@@ -1,0 +1,57 @@
+2024-06-18 09:47:31.631 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-18 09:47:31.893 +03:00 [INF] Now listening on: https://localhost:7251
+2024-06-18 09:47:31.894 +03:00 [INF] Now listening on: http://localhost:5094
+2024-06-18 09:47:31.895 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-18 09:47:31.895 +03:00 [INF] Hosting environment: Development
+2024-06-18 09:47:31.895 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\ServiceCenterMicroservice\ServiceCenter.Api
+2024-06-18 09:47:32.684 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - null null
+2024-06-18 09:47:32.870 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - 200 null text/html;charset=utf-8 189.5563ms
+2024-06-18 09:47:32.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-18 09:47:32.889 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.6033ms
+2024-06-18 09:47:32.895 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - null null
+2024-06-18 09:47:32.931 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.0863ms
+2024-06-18 09:47:33.086 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - null null
+2024-06-18 09:47:33.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.8347ms
+2024-06-18 09:50:35.426 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-18 09:50:35.741 +03:00 [INF] Now listening on: https://localhost:7251
+2024-06-18 09:50:35.741 +03:00 [INF] Now listening on: http://localhost:5094
+2024-06-18 09:50:35.743 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-18 09:50:35.743 +03:00 [INF] Hosting environment: Development
+2024-06-18 09:50:35.743 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\ServiceCenterMicroservice\ServiceCenter.Api
+2024-06-18 09:50:36.112 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - null null
+2024-06-18 09:50:36.290 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - 200 null text/html;charset=utf-8 179.0764ms
+2024-06-18 09:50:36.296 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-18 09:50:36.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.4708ms
+2024-06-18 09:50:36.308 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - null null
+2024-06-18 09:50:36.356 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.3883ms
+2024-06-18 09:50:36.479 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - null null
+2024-06-18 09:50:36.599 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.6932ms
+2024-06-18 09:50:48.331 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/repair-requests/service - null null
+2024-06-18 09:50:49.291 +03:00 [INF] Executing endpoint 'ServiceCenter.Api.Controllers.ServiceCenterController.GetAllServices (ServiceCenter.Api)'
+2024-06-18 09:50:49.313 +03:00 [INF] Route matched with {action = "GetAllServices", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllServices(ServiceCenter.Application.Requests.Query.GetAllCenters.GetAllCentersQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller ServiceCenter.Api.Controllers.ServiceCenterController (ServiceCenter.Api).
+2024-06-18 09:50:51.930 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[AdminId], [s].[Location], [s].[Name]
+FROM [ServicesCenters] AS [s]
+ORDER BY [s].[Id]
+2024-06-18 09:50:52.016 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServiceCenter.Application.dto.ServiceCenterDto, ServiceCenter.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-18 09:50:52.027 +03:00 [INF] Executed action ServiceCenter.Api.Controllers.ServiceCenterController.GetAllServices (ServiceCenter.Api) in 2710.6767ms
+2024-06-18 09:50:52.027 +03:00 [INF] Executed endpoint 'ServiceCenter.Api.Controllers.ServiceCenterController.GetAllServices (ServiceCenter.Api)'
+2024-06-18 09:50:52.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/repair-requests/service - 200 null application/json; charset=utf-8 3702.8821ms
+2024-06-18 09:51:03.715 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/repair-requests/service/2 - null null
+2024-06-18 09:51:03.718 +03:00 [INF] Executing endpoint 'ServiceCenter.Api.Controllers.ServiceCenterController.GetServiceById (ServiceCenter.Api)'
+2024-06-18 09:51:03.723 +03:00 [INF] Route matched with {action = "GetServiceById", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetServiceById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller ServiceCenter.Api.Controllers.ServiceCenterController (ServiceCenter.Api).
+2024-06-18 09:51:03.946 +03:00 [INF] Executed DbCommand (177ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [s].[Id], [s].[Name], [s].[Price]
+FROM [Services] AS [s]
+WHERE [s].[Id] = @__request_Id_0
+2024-06-18 09:51:03.957 +03:00 [INF] Executing OkObjectResult, writing value of type 'ServiceCenter.Application.dto.ServiceDto'.
+2024-06-18 09:51:03.961 +03:00 [INF] Executed action ServiceCenter.Api.Controllers.ServiceCenterController.GetServiceById (ServiceCenter.Api) in 238.3484ms
+2024-06-18 09:51:03.961 +03:00 [INF] Executed endpoint 'ServiceCenter.Api.Controllers.ServiceCenterController.GetServiceById (ServiceCenter.Api)'
+2024-06-18 09:51:03.962 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/repair-requests/service/2 - 200 null application/json; charset=utf-8 246.449ms
+2024-06-18 09:51:09.831 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7251/repair-requests/center - null null
+2024-06-18 09:51:09.836 +03:00 [INF] Executing endpoint 'ServiceCenter.Api.Controllers.ServiceCenterController.GetAllCenters (ServiceCenter.Api)'
+2024-06-18 09:51:09.842 +03:00 [INF] Route matched with {action = "GetAllCenters", controller = "ServiceCenter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllCenters(ServiceCenter.Application.Requests.Query.GetAllCenters.GetAllCentersQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller ServiceCenter.Api.Controllers.ServiceCenterController (ServiceCenter.Api).
+2024-06-18 09:51:09.907 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServiceCenter.Application.dto.ServiceCenterDto, ServiceCenter.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-18 09:51:09.907 +03:00 [INF] Executed action ServiceCenter.Api.Controllers.ServiceCenterController.GetAllCenters (ServiceCenter.Api) in 65.0323ms
+2024-06-18 09:51:09.907 +03:00 [INF] Executed endpoint 'ServiceCenter.Api.Controllers.ServiceCenterController.GetAllCenters (ServiceCenter.Api)'
+2024-06-18 09:51:09.907 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7251/repair-requests/center - 200 null application/json; charset=utf-8 75.6428ms

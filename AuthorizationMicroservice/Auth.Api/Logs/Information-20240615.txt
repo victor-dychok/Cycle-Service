@@ -1,0 +1,74 @@
+2024-06-15 17:57:56.587 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-15 17:57:56.930 +03:00 [INF] Now listening on: https://localhost:7104
+2024-06-15 17:57:56.930 +03:00 [INF] Now listening on: http://localhost:5148
+2024-06-15 17:57:56.932 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-15 17:57:56.932 +03:00 [INF] Hosting environment: Development
+2024-06-15 17:57:56.932 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-06-15 17:57:57.810 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger - null null
+2024-06-15 17:57:57.999 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger - 301 0 null 193.2142ms
+2024-06-15 17:57:58.003 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-06-15 17:57:58.089 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 85.7551ms
+2024-06-15 17:57:58.101 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/swagger-ui.css - null null
+2024-06-15 17:57:58.101 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/swagger-ui-standalone-preset.js - null null
+2024-06-15 17:57:58.101 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/swagger-ui-bundle.js - null null
+2024-06-15 17:57:58.101 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-15 17:57:58.115 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 14.0137ms
+2024-06-15 17:57:58.120 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-06-15 17:57:58.173 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-06-15 17:57:58.175 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/swagger-ui.css - 200 143943 text/css 74.0145ms
+2024-06-15 17:57:58.194 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.9312ms
+2024-06-15 17:57:58.235 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-06-15 17:57:58.235 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 133.8746ms
+2024-06-15 17:57:58.295 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-06-15 17:57:58.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 194.6154ms
+2024-06-15 17:57:58.500 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-06-15 17:57:58.600 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.82ms
+2024-06-15 21:17:27.069 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-15 21:17:27.179 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-15 21:17:27.179 +03:00 [INF] Hosting environment: Development
+2024-06-15 21:17:27.179 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-06-15 21:17:27.207 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44383/swagger - null null
+2024-06-15 21:17:27.260 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44383/swagger - 301 null null 53.4999ms
+2024-06-15 21:17:27.260 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44383/swagger/index.html - null null
+2024-06-15 21:17:27.351 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44383/swagger/index.html - 200 null text/html;charset=utf-8 91.4361ms
+2024-06-15 21:17:27.358 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44383/swagger/swagger-ui.css - null null
+2024-06-15 21:17:27.358 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44383/swagger/swagger-ui-bundle.js - null null
+2024-06-15 21:17:27.359 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44383/swagger/swagger-ui-standalone-preset.js - null null
+2024-06-15 21:17:27.416 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-06-15 21:17:27.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44383/swagger/swagger-ui.css - 200 143943 text/css 61.02ms
+2024-06-15 21:17:27.478 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-06-15 21:17:27.483 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44383/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 124.5626ms
+2024-06-15 21:17:27.530 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-06-15 21:17:27.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44383/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 188.212ms
+2024-06-15 21:17:27.770 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44383/swagger/v1/swagger.json - null null
+2024-06-15 21:17:27.815 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44383/swagger/favicon-32x32.png - null null
+2024-06-15 21:17:27.815 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-06-15 21:17:27.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44383/swagger/favicon-32x32.png - 200 628 image/png 1.1913ms
+2024-06-15 21:17:27.976 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44383/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.106ms
+2024-06-15 21:17:38.913 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44383/Auth/CreateJwtToken - application/json 50
+2024-06-15 21:17:39.806 +03:00 [INF] Executing endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-15 21:17:39.827 +03:00 [INF] Route matched with {action = "Post", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Authorization.Application.Requests.Comands.CreateJwtToken.CreateJwtTokenComand, MediatR.IMediator, System.Threading.CancellationToken) on controller UserAPI.Controllers.AuthController (Auth.Api).
+2024-06-15 21:17:44.035 +03:00 [INF] Executed DbCommand (94ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Login], [u].[PasswordHash]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-15 21:17:44.210 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_Login_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+INNER JOIN [Users] AS [u] ON [a].[UserId] = [u].[Id]
+WHERE [u].[Login] = @__request_Login_0
+2024-06-15 21:17:44.244 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Id] = @__role_RoleId_0
+2024-06-15 21:17:44.488 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshTokens] ([UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-15 21:17:44.522 +03:00 [INF] Executing OkObjectResult, writing value of type 'Authorization.dto.JwtTokenDto'.
+2024-06-15 21:17:44.540 +03:00 [INF] Executed action UserAPI.Controllers.AuthController.Post (Auth.Api) in 4707.4999ms
+2024-06-15 21:17:44.541 +03:00 [INF] Executed endpoint 'UserAPI.Controllers.AuthController.Post (Auth.Api)'
+2024-06-15 21:17:44.558 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44383/Auth/CreateJwtToken - 200 null application/json; charset=utf-8 5644.648ms
+2024-06-15 21:25:49.627 +03:00 [INF] Application is shutting down...
