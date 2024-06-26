@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Authorization.Percistance
 {
-    public class SqlServerBaseReository<TEntity>(AppDBContext applicationDbContext) : IRepository<TEntity> where TEntity : class, new()
+    public class SqlServerBaseReository<TEntity>(DockerComposeDemoDbContext applicationDbContext) : IRepository<TEntity> where TEntity : class, new()
     {
-        private readonly AppDBContext _applicationDbContext = applicationDbContext;
+        private readonly DockerComposeDemoDbContext _applicationDbContext = applicationDbContext;
 
         public async Task<TEntity?> SingleOrDefaultAsync(Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default)
         {

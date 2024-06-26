@@ -141,7 +141,6 @@ D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservi
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\RepairRequest.Api.AssemblyInfoInputs.cache
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\RepairRequest.Api.AssemblyInfo.cs
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\RepairRequest.Api.csproj.CoreCompileInputs.cache
-D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\RepairRequest.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\RepairRequest.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\staticwebassets.build.json
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\staticwebassets.development.json
@@ -158,3 +157,10 @@ D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservi
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\RepairRequest.Api.genruntimeconfig.cache
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\ref\RepairRequest.Api.dll
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\RepairRequestMicroservice\RepairRequest.Api\obj\Debug\net8.0\RepairRequest.Api.MvcApplicationPartsAssemblyInfo.cs

@@ -4,15 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Authorization.Percistance
 {
-    public class AppDBContext : DbContext
+    public class DockerComposeDemoDbContext : DbContext
     {
 
         public DbSet<AppUser> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
-        public AppDBContext(DbContextOptions<AppDBContext> dbContextOptions) : base(dbContextOptions)
+        public DockerComposeDemoDbContext(DbContextOptions<DockerComposeDemoDbContext> dbContextOptions) : base(dbContextOptions)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -16,17 +16,17 @@ namespace Application.User.Application.Query.GetById
     {
         private readonly IRepository<AppUser> _repository;
         private readonly IRepository<AppUserAppRole> _ur;
-        private readonly MemoryCache _memoryCeche;
+        private readonly IUserCache<GetUserDto> _userCache;
         private readonly IMapper _mapper;
          
         public GetByIdOrDefaultQueryHandler(
             IRepository<AppUser> repository,
-            UserMemoryCache memoryCeche, 
             IMapper mapper, 
+            IUserCache<GetUserDto> userCache,
             IRepository<AppUserAppRole> ur)
         {
             _repository = repository;
-            _memoryCeche = memoryCeche.Cache;
+            _userCache = userCache;
             _mapper = mapper;
             _ur = ur;
         }
@@ -37,7 +37,7 @@ namespace Application.User.Application.Query.GetById
             {
                 ReferenceHandler = ReferenceHandler.IgnoreCycles
             });
-            if (_memoryCeche.TryGetValue(cacheKey, out GetUserDto? result))
+            if (_userCache.TryGetValue(cacheKey, out GetUserDto? result))
             {
                 return result!;
             }
@@ -56,10 +56,7 @@ namespace Application.User.Application.Query.GetById
             }
             result.Roles = rolesArray;
 
-            var cacheEntryOptions = new MemoryCacheEntryOptions()
-                .SetAbsoluteExpiration(TimeSpan.FromMinutes(5))
-                .SetSize(5);
-            _memoryCeche.Set(cacheKey, result, cacheEntryOptions);
+            _userCache.Set(cacheKey, result);
 
             return result;
         }

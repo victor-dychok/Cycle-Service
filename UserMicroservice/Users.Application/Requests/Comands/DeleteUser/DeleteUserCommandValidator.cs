@@ -10,6 +10,9 @@ namespace Users.Application.Requests.Comands.DeleteUser
 {
     public class DeleteUserCommandValidator : AbstractValidator<DeleteUserComand>
     {
-        public DeleteUserCommandValidator() { }
+        public DeleteUserCommandValidator() 
+        {
+            RuleFor(e => e.Id).GreaterThan(0).LessThan(int.MaxValue);
+        }
     }
 }

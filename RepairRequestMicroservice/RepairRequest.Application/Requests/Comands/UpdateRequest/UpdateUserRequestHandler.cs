@@ -13,18 +13,18 @@ namespace RepairRequest.Application.Requests.Comands.UpdateRequest
     public class UpdateUserRequestHandler : IRequestHandler<UpdateRequestComand, GetRequestsDTO>
     {
         private readonly IRepository<RepairRequestEntity> _requestsRepository;
-        private readonly MemoryCache _memoryCache;
+        private readonly IRequestCache<IReadOnlyCollection<GetRequestsDTO>> _requestCache;
         private readonly ICurrentUserService _currentUserService;
         private readonly IMapper _mapper;
         public UpdateUserRequestHandler(
             IRepository<RepairRequestEntity> requestsRepository,
             ICurrentUserService currentUserService,
-            RepairRequestMemoryCache memoryCache,
+            IRequestCache<IReadOnlyCollection<GetRequestsDTO>> requestCache,
             IMapper mapper)
         {
             _requestsRepository = requestsRepository;
             _currentUserService = currentUserService;
-            _memoryCache = memoryCache.Cache;
+            _requestCache = requestCache;
             _mapper = mapper;
         }
 
@@ -42,7 +42,7 @@ namespace RepairRequest.Application.Requests.Comands.UpdateRequest
                 {
                     throw new BadRequestExeption("Can not update user");
                 }
-                _memoryCache.Clear();
+                _requestCache.Clear();
                 return _mapper.Map<GetRequestsDTO>(item);
             }
             else

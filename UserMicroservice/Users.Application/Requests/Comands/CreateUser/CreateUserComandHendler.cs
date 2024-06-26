@@ -14,19 +14,19 @@ namespace Users.Application.Comands.CreateUser
         private readonly IRepository<AppUser> _userRepository;
         private readonly IRepository<AppUserRole> _roles;
         private readonly IRepository<AppUserAppRole> _appUR;
-        private readonly MemoryCache _memoryCache;
+        private readonly IUserCache<IReadOnlyCollection<GetUserDto>> _userCache;
         private readonly IMapper _mapper;
         public CreateUserComandHendler(
             IRepository<AppUser> users,
             IRepository<AppUserRole> roles,
             IRepository<AppUserAppRole> userRoles,
-            UserMemoryCache memoryCache,
+            IUserCache<IReadOnlyCollection<GetUserDto>> userCache,
             IMapper mapper) 
         {
             _roles = roles;
             _userRepository = users;
-            _memoryCache = memoryCache.Cache;
             _appUR = userRoles;
+            _userCache = userCache;
             _mapper = mapper;
         }
 
@@ -49,13 +49,17 @@ namespace Users.Application.Comands.CreateUser
             }
 
             var role = await _roles.SingleOrDefaultAsync(i => i.Name == "Client");
+            if (role is null)
+            {
+                role = await _roles.AddAsync(new AppUserRole() { Name = "Client" });
+            }
             var appUR = await _appUR.AddAsync(new AppUserAppRole
             {
                 Role = role,
                 User = addedItem
             }, cancellationToken);
 
-            _memoryCache.Clear();
+            _userCache.Clear();
             return _mapper.Map<GetUserDto>(addedItem);
         }
     }

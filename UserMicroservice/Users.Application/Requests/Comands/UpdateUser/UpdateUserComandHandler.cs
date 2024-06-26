@@ -12,18 +12,18 @@ namespace Users.Application.Comands.UpdateUser
     public class UpdateUserComandHandler : IRequestHandler<UpdateUserComand, GetUserDto>
     {
         private readonly IRepository<AppUser> _userRepository;
-        private readonly MemoryCache _memoryCache;
+        private readonly IUserCache<IReadOnlyCollection<GetUserDto>> _userCache;
         private readonly ICurrentUserService _currentUserService;
         private readonly IMapper _mapper;
         public UpdateUserComandHandler(
             IRepository<AppUser> users,
             ICurrentUserService currentUserService,
-            UserMemoryCache memoryCache,
+            IUserCache<IReadOnlyCollection<GetUserDto>> userCache,
             IMapper mapper)
         {
             _userRepository = users;
             _currentUserService = currentUserService;
-            _memoryCache = memoryCache.Cache;
+            _userCache = userCache;
             _mapper = mapper;
         }
 
@@ -42,7 +42,7 @@ namespace Users.Application.Comands.UpdateUser
             user.UpdatePhone(request.Phone);
             if (user.Id == currentUserId || userRoles.Contains("Admin"))
             {
-                _memoryCache.Clear();
+                _userCache.Clear();
                 return _mapper.Map<GetUserDto>(await _userRepository.UpdateAsync(user, cancellationToken));
             }
             else

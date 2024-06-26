@@ -23,7 +23,7 @@ namespace RepairRequest.Application.Requests.Comands.SetCompletedStatus
         private readonly IRepository<RequestStatus> _statuses;
         private readonly ICurrentUserService _currentUserService;
         private readonly IRepository<RepairRequestEntity> _requestsRepository;
-        private readonly MemoryCache _memoryCache;
+        private readonly IRequestCache<IReadOnlyCollection<GetRequestsDTO>> _requestCache;
         private readonly IMqService _mqService;
         private readonly IMapper _mapper;
 
@@ -32,13 +32,13 @@ namespace RepairRequest.Application.Requests.Comands.SetCompletedStatus
             ICurrentUserService currentUserService,
             IRepository<RequestStatus> statuses,
             IRepository<RepairRequestEntity> requests,
-            RepairRequestMemoryCache memoryCache,
+            IRequestCache<IReadOnlyCollection<GetRequestsDTO>> requestCache,
             IMqService mqService,
             IMapper mapper)
         {
             _userRepository = users;
             _currentUserService = currentUserService;
-            _memoryCache = memoryCache.Cache;
+            _requestCache = requestCache;
             _mqService = mqService;
 
             _statuses = statuses;
@@ -74,7 +74,7 @@ namespace RepairRequest.Application.Requests.Comands.SetCompletedStatus
             await _requestsRepository.UpdateAsync(repairRequest);
             _mqService.SendMessage("request-status", JsonSerializer.Serialize("Your request status has been changed to " + status.StatusName));
 
-            _memoryCache.Clear();
+            _requestCache.Clear();
             return _mapper.Map<GetRequestsDTO>(repairRequest);
         }
     }

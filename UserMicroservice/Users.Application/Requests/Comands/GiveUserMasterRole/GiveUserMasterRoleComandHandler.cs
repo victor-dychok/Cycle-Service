@@ -20,22 +20,22 @@ namespace Users.Application.Comands.GiveUserMasterRole
         private readonly IRepository<AppUser> _userRepository;
         private readonly IRepository<AppUserAppRole> _appURRepository;
         private readonly IRepository<AppUserRole> _roleRepository;
-        private readonly MemoryCache _memoryCache;
         private readonly ICurrentUserService _currentUserService;
+        private readonly IUserCache<IReadOnlyCollection<GetUserDto>> _userCache;
         private readonly IMapper _mapper;
 
         public GiveUserMasterRoleComandHandler(
             IRepository<AppUser> userRepository,
             IRepository<AppUserAppRole> appURRepository,
             IRepository<AppUserRole> roleRepository,
-            UserMemoryCache memoryCache,
+            IUserCache<IReadOnlyCollection<GetUserDto>> userCache,
             ICurrentUserService currentUserService,
             IMapper mapper)
         {
             _userRepository = userRepository;
+            _userCache = userCache;
             _appURRepository = appURRepository;
             _roleRepository = roleRepository;
-            _memoryCache = memoryCache.Cache;
             _currentUserService = currentUserService;
             _mapper = mapper;
         }
@@ -80,7 +80,7 @@ namespace Users.Application.Comands.GiveUserMasterRole
                     {
                         throw new BadRequestExeption("Can not update user");
                     }
-                    _memoryCache.Clear();
+                    _userCache.Clear();
                     return _mapper.Map<GetUserDto>(user);
                 }
                 else

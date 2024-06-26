@@ -162,7 +162,6 @@ D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.A
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\User.Api.AssemblyInfoInputs.cache
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\User.Api.AssemblyInfo.cs
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\User.Api.csproj.CoreCompileInputs.cache
-D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\User.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\User.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\User.Api.dll
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\refint\User.Api.dll
@@ -326,3 +325,10 @@ D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.A
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Google.Api.CommonProtos.dll
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Grpc.JsonTranscoding.dll
 D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Grpc.Swagger.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\obj\Debug\net8.0\User.Api.MvcApplicationPartsAssemblyInfo.cs

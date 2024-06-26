@@ -26,7 +26,7 @@ namespace RepairRequest.Application.Requests.Comands.AcceptRequest
         private readonly IRepository<RequestStatus> _statuses;
         private readonly ICurrentUserService _currentUserService;
         private readonly IRepository<RepairRequestEntity> _requestsRepository;
-        private readonly MemoryCache _memoryCache;
+        private readonly IRequestCache<IReadOnlyCollection<GetRequestsDTO>> _requestCache;
         private readonly IMqService _mqService;
         private readonly IMapper _mapper;
         public AcceptRequestComandHandler(
@@ -36,7 +36,7 @@ namespace RepairRequest.Application.Requests.Comands.AcceptRequest
             ICurrentUserService currentUserService,
             IRepository<RequestStatus> statuses,
             IRepository<RepairRequestEntity> requests,
-            RepairRequestMemoryCache memoryCache,
+            IRequestCache<IReadOnlyCollection<GetRequestsDTO>> requestCache,
             IMqService mqService,
             IMapper mapper)
         {
@@ -45,7 +45,7 @@ namespace RepairRequest.Application.Requests.Comands.AcceptRequest
             _appUR = appUR;
             
             _currentUserService = currentUserService;
-            _memoryCache = memoryCache.Cache;
+            _requestCache = requestCache;
             _mqService = mqService;
 
             _statuses = statuses;
@@ -92,7 +92,7 @@ namespace RepairRequest.Application.Requests.Comands.AcceptRequest
                 Message = $"Your request #{repairRequest.Id} status has been changed to {status.StatusName}",
             };
             _mqService.SendMessage("request-status", JsonSerializer.Serialize(emailMessage));
-            _memoryCache.Clear();
+            _requestCache.Clear();
             return _mapper.Map<GetRequestsDTO>(item);
         }
     }

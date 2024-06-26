@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Caching.Memory;
 using Users.Application.Abstraction.Percistance;
+using Users.Application.dto;
 using Users.Domain;
 using Users.Service;
 using Users.Service.Exeptions;
@@ -11,15 +12,15 @@ namespace Users.Application.Comands.DeleteUser
     {
         private readonly IRepository<AppUser> _userRepository;
         private readonly ICurrentUserService _currentUserService;
-        private readonly MemoryCache _memoryCeche;
+        private readonly IUserCache<IReadOnlyCollection<GetUserDto>> _userCache;
 
         public DeleteUserComandHandler(
             IRepository<AppUser> users,
-            UserMemoryCache cache,
+            IUserCache<IReadOnlyCollection<GetUserDto>> userCache,
             ICurrentUserService currentUserService)
         {
             _userRepository = users;
-            _memoryCeche = cache.Cache;
+            _userCache = userCache;
             _currentUserService = currentUserService;
         }
 
@@ -34,7 +35,7 @@ namespace Users.Application.Comands.DeleteUser
             }
             if (user.Id == currentUserId || userRoles.Contains("Admin"))
             {
-                _memoryCeche.Clear();
+                _userCache.Clear();
                 return await _userRepository.DeleteAsync(user, cancellationToken);
             }
             else

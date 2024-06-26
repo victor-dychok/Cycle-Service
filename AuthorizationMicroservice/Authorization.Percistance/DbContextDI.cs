@@ -16,7 +16,7 @@ namespace Authorization.Percistance
     {
         public static IServiceCollection AddTodoDatabase(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<DbContext, AppDBContext>(
+            services.AddDbContext<DbContext, DockerComposeDemoDbContext>(
                 options =>
                 {
                     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));

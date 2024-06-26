@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Microsoft.Extensions.Caching.Memory;
 using RepairRequest.Application.Abstraction.Percistance;
 using RepairRequest.Application.dto;
 using RepairRequest.Domain;
@@ -18,7 +17,7 @@ namespace RepairRequest.Application.Comands.CreateRequest
         private readonly IRepository<RepairRequestService> _requestServices;
         private readonly IRepository<RepairRequestComponent> _requestComponents;
         private readonly IRepository<ServiceEntity> _services;
-        private readonly MemoryCache _memoryCache;
+        private readonly IRequestCache<IReadOnlyCollection<GetRequestsDTO>> _requestCache;
         private readonly IMapper _mapper;
         public CreateRequestComandHendler(
             IRepository<AppUser> users,
@@ -28,12 +27,12 @@ namespace RepairRequest.Application.Comands.CreateRequest
             IRepository<RepairRequestComponent> requestComponents,
             IRepository<ServiceEntity> services,
             IRepository<RepairRequestEntity> requests,
-            RepairRequestMemoryCache memoryCache,
+            IRequestCache<IReadOnlyCollection<GetRequestsDTO>> requestCache,
             IMapper mapper) 
         {
             _userRepository = users;
             _currentUserService = currentUserService;
-            _memoryCache = memoryCache.Cache;
+            _requestCache = requestCache;
 
             _requestServices = requestServices;
             _requestComponents = requestComponents;
@@ -93,7 +92,7 @@ namespace RepairRequest.Application.Comands.CreateRequest
             }
 
 
-            _memoryCache.Clear();
+            _requestCache.Clear();
             return _mapper.Map<GetRequestsDTO>(addedItem);
         }
     }

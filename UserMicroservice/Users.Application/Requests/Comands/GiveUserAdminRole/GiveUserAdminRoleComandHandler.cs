@@ -20,7 +20,6 @@ namespace Users.Application.Comands.GiveUserAdminRole
         private readonly IRepository<AppUser> _userRepository;
         private readonly IRepository<AppUserAppRole> _appURRepository;
         private readonly IRepository<AppUserRole> _roleRepository;
-        private readonly MemoryCache _memoryCache;
         private readonly ICurrentUserService _currentUserService;
         private readonly IMapper _mapper;
 
@@ -28,14 +27,12 @@ namespace Users.Application.Comands.GiveUserAdminRole
             IRepository<AppUser> userRepository,
             IRepository<AppUserAppRole> appURRepository,
             IRepository<AppUserRole> roleRepository,
-            UserMemoryCache memoryCache,
             ICurrentUserService currentUserService,
             IMapper mapper)
         {
             _userRepository = userRepository;
             _appURRepository = appURRepository;
             _roleRepository = roleRepository;
-            _memoryCache = memoryCache.Cache;
             _currentUserService = currentUserService;
             _mapper = mapper;
         }
@@ -44,6 +41,11 @@ namespace Users.Application.Comands.GiveUserAdminRole
         {
             var currentUserId = int.Parse(_currentUserService.CurrentUserId);
             var currentUserRoles = _currentUserService.CurrentUserRoles.ToList();
+            var adminRole = await _roleRepository.SingleOrDefaultAsync(e => e.Name == "Admin");
+            if (adminRole == null)
+            {
+                adminRole = await _roleRepository.AddAsync(new AppUserRole { Name = "Admin" }, cancellationToken);
+            }
 
             var user = await _userRepository.SingleOrDefaultAsync(u => u.Id == request.Id);
             if(user is null)
@@ -52,11 +54,6 @@ namespace Users.Application.Comands.GiveUserAdminRole
             }
             if (currentUserRoles.Contains("Admin"))
             {
-                var adminRole = await _roleRepository.SingleOrDefaultAsync(e => e.Name == "Admin");
-                if(adminRole is null)
-                {
-                    throw new NotFoundExeption("Admin role not found");
-                }
                 if(request.RemoveRole)
                 {
                     var role = await _appURRepository.SingleOrDefaultAsync(e => e.UserId == user.Id && e.RoleId == adminRole.Id);
@@ -79,7 +76,6 @@ namespace Users.Application.Comands.GiveUserAdminRole
                     {
                         throw new BadRequestExeption("Can not update user");
                     }
-                    _memoryCache.Clear();
                     return _mapper.Map<GetUserDto>(user);
                 }
                 else

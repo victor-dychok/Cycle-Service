@@ -14,13 +14,16 @@ namespace RepairRequest.Application.Query.GetById
     public class GetByIdOrDefaultQueryHandler : IRequestHandler<GetByIdQuery, GetRequestsDTO>
     {
         private readonly IRepository<RepairRequestEntity> _repository;
-        private readonly MemoryCache _memoryCeche;
+        private readonly IRequestCache<GetRequestsDTO> _requestCache;
         private readonly IMapper _mapper;
 
-        public GetByIdOrDefaultQueryHandler(IRepository<RepairRequestEntity> repository, RepairRequestMemoryCache memoryCeche, IMapper mapper)
+        public GetByIdOrDefaultQueryHandler(
+            IRepository<RepairRequestEntity> repository,
+            IRequestCache<GetRequestsDTO> requestCache,
+            IMapper mapper)
         {
             _repository = repository;
-            _memoryCeche = memoryCeche.Cache;
+            _requestCache = requestCache;
             _mapper = mapper;
         }
 
@@ -30,7 +33,7 @@ namespace RepairRequest.Application.Query.GetById
             {
                 ReferenceHandler = ReferenceHandler.IgnoreCycles
             });
-            if (_memoryCeche.TryGetValue(cacheKey, out GetRequestsDTO? result))
+            if (_requestCache.TryGetValue(cacheKey, out GetRequestsDTO? result))
             {
                 return result!;
             }
@@ -42,10 +45,7 @@ namespace RepairRequest.Application.Query.GetById
             }
             result = _mapper.Map<GetRequestsDTO>(item);
 
-            var cacheEntryOptions = new MemoryCacheEntryOptions()
-                .SetAbsoluteExpiration(TimeSpan.FromMinutes(5))
-                .SetSize(5);
-            _memoryCeche.Set(cacheKey, result, cacheEntryOptions);
+            _requestCache.Set(cacheKey, result);
 
             return result;
         }

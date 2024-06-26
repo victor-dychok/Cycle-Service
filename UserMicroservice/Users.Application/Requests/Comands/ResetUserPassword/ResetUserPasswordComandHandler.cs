@@ -13,19 +13,19 @@ namespace Users.Application.Comands.UpdateUserPassword
     public class ResetUserPasswordComandHandler : IRequestHandler<ResetPasswordComand, GetUserDto>
     {
         private readonly IRepository<AppUser> _userRepository;
-        private readonly MemoryCache _memoryCache;
+        private readonly IUserCache<IReadOnlyCollection<GetUserDto>> _userCache;
         private readonly ICurrentUserService _currentUserService;
 
         private readonly IMapper _mapper;
         public ResetUserPasswordComandHandler(
             IRepository<AppUser> users,
+            IUserCache<IReadOnlyCollection<GetUserDto>> userCache,
             ICurrentUserService currentUserService,
-            UserMemoryCache memoryCache,
             IMapper mapper)
         {
             _userRepository = users;
+            _userCache = userCache;
             _currentUserService = currentUserService;
-            _memoryCache = memoryCache.Cache;
             _mapper = mapper;
         }
 
@@ -43,7 +43,7 @@ namespace Users.Application.Comands.UpdateUserPassword
                 {
                     throw new BadRequestExeption("Can not update user");
                 }
-                _memoryCache.Clear();
+                _userCache.Clear();
                 return _mapper.Map<GetUserDto>(item);
             }
             else

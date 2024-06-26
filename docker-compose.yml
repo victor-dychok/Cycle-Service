@@ -1,0 +1,31 @@
+services:
+  
+  mssql:
+    container_name: sql-server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "0bd7903b-f568-4894-8d72-3c1b507e5644"
+    volumes:
+      - /Users/vitia/Documents/Databases/mssql
+    ports:
+      - "1433:1433"
+      
+  proxy:
+    container_name: proxy_container
+    image: nginx:mainline
+    volumes:
+      - /nginx.conf
+    restart: unless-stopped
+    ports:
+      - "80:80"
+
+  auth.api:
+    image: authapi
+    build:
+      context: .
+      dockerfile: AuthorizationMicroservice/Auth.Api/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8082:8080"

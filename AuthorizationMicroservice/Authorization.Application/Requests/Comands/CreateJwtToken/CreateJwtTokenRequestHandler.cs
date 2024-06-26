@@ -39,7 +39,36 @@ namespace Authorization.Application.Requests.Comands.CreateJwtToken
 
         public async Task<JwtTokenDto> Handle(CreateJwtTokenComand request, CancellationToken cancellationToken)
         {
-            var user = await _userRepository.SingleOrDefaultAsync(u => u.Login == request.Login.Trim());
+
+            var adminRole = await _roles.SingleOrDefaultAsync(i => i.Name == "Admin", cancellationToken);
+            if (adminRole == null)
+            {
+                adminRole = await _roles.AddAsync(new AppUserRole { Name = "Admin" }, cancellationToken);
+            }
+
+            var urItem = await _appUR.FirstOrDefaultAsync(r => r.RoleId == adminRole.Id, cancellationToken);
+
+            if(urItem == null)
+            {
+                var entity = new AppUser();
+                entity.UpdateLogin(request.Login);
+                entity.UpdatePassword(PasswordHashUtil.Hash(request.Password));
+                entity.UpdatePhone("+375331234567");
+                entity.UpdateEmail("admin@gmail.com");
+                var addedItem = await _userRepository.AddAsync(entity, cancellationToken);
+                if (addedItem is null)
+                {
+                    throw new BadRequestExeption("Can not add user");
+                }
+                var appUR = await _appUR.AddAsync(new AppUserAppRole
+                {
+                    Role = adminRole,
+                    User = addedItem
+                }, cancellationToken);
+            }
+
+
+            var user = await _userRepository.SingleOrDefaultAsync(u => u.Login == request.Login.Trim(), cancellationToken);
             if (user is null)
             {
                 throw new NotFoundExeption($"No user with login: {request.Login}");

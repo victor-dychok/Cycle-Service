@@ -12,13 +12,13 @@ namespace Users.Application.Query.GetAll
     public class GetListQueryHandler : IRequestHandler<GetListQuery, IReadOnlyCollection<GetUserDto>>
     {
         private readonly IRepository<AppUser> _users;
-        private readonly MemoryCache _memoryCeche;
+        private readonly IUserCache<IReadOnlyCollection<GetUserDto>> _userCache;
         private readonly IMapper _mapper;
 
-        public GetListQueryHandler(IRepository<AppUser> users, UserMemoryCache memoryCeche, IMapper mapper) 
+        public GetListQueryHandler(IRepository<AppUser> users, IUserCache<IReadOnlyCollection<GetUserDto>> cache, IMapper mapper) 
         {
             _users = users;
-            _memoryCeche = memoryCeche.Cache;
+            _userCache = cache;
             _mapper = mapper;
         }
         public async Task<IReadOnlyCollection<GetUserDto>> Handle(GetListQuery request, CancellationToken cancellationToken)
@@ -27,7 +27,7 @@ namespace Users.Application.Query.GetAll
             {
                 ReferenceHandler = ReferenceHandler.IgnoreCycles
             });
-            if (_memoryCeche.TryGetValue(cacheKey, out IReadOnlyCollection<GetUserDto>? result))
+            if (_userCache.TryGetValue(cacheKey, out IReadOnlyCollection<GetUserDto>? result))
             {
                 return result!;
             }
@@ -39,10 +39,8 @@ namespace Users.Application.Query.GetAll
             q => q.Id,
             token: cancellationToken));
 
-            var cacheEntryOptions = new MemoryCacheEntryOptions()
-                .SetAbsoluteExpiration(TimeSpan.FromMinutes(5))
-                .SetSize(5);
-            _memoryCeche.Set(cacheKey, result, cacheEntryOptions);
+
+            _userCache.Set(cacheKey, result);
 
             return result;
         }

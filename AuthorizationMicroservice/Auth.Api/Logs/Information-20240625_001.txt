@@ -1,0 +1,68 @@
+2024-06-25 14:27:54.939 +03:00 [ERR] The host was aborted.
+2024-06-25 14:28:07.946 +03:00 [ERR] The host was aborted.
+2024-06-25 14:28:08.979 +03:00 [INF] Executed DbCommand (208ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Developer];
+2024-06-25 14:28:09.093 +03:00 [INF] Executed DbCommand (111ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Developer] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-06-25 14:28:09.119 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-25 14:28:09.183 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-06-25 14:28:09.185 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-06-25 14:28:09.198 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-06-25 14:28:09.211 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-06-25 14:28:09.223 +03:00 [INF] Applying migration '20240620094033_Initial'.
+2024-06-25 14:28:09.266 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserRole] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_AppUserRole] PRIMARY KEY ([Id])
+);
+2024-06-25 14:28:09.271 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Login] nvarchar(50) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Phone] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-06-25 14:28:09.275 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUserAppRole] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [RoleId] int NOT NULL,
+    CONSTRAINT [PK_AppUserAppRole] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AppUserAppRole_AppUserRole_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AppUserRole] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AppUserAppRole_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-06-25 14:28:09.279 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RefreshTokens] (
+    [Id] nvarchar(450) NOT NULL DEFAULT (NEWID()),
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_RefreshTokens] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RefreshTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-06-25 14:28:09.281 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_RoleId] ON [AppUserAppRole] ([RoleId]);
+2024-06-25 14:28:09.284 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppUserAppRole_UserId] ON [AppUserAppRole] ([UserId]);
+2024-06-25 14:28:09.286 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RefreshTokens_UserId] ON [RefreshTokens] ([UserId]);
+2024-06-25 14:28:09.288 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Login] ON [Users] ([Login]);
+2024-06-25 14:28:09.295 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240620094033_Initial', N'8.0.6');

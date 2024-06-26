@@ -15,7 +15,7 @@ namespace UserAPI.Controllers
     {
         [AllowAnonymous]
         [HttpPost("CreateJwtToken")]
-        public async Task<IActionResult> Post(CreateJwtTokenComand comand, IMediator mediator, CancellationToken cancellation)
+        public async Task<IActionResult> Post([FromQuery]CreateJwtTokenComand comand, IMediator mediator, CancellationToken cancellation)
         {
             var token = await mediator.Send(comand, cancellation);
             return Ok(token);

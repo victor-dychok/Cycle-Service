@@ -12,7 +12,7 @@ namespace Users.Application.Requests.Comands.GiveUserCenterAdminRoleComand
     {
         public GiveUserCenterAdminRoleComandValidator()
         {
-
+            RuleFor(e => e.Id).GreaterThan(0).LessThan(int.MaxValue);
         }
     }
 }

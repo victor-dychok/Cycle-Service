@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Caching.Memory;
 using RepairRequest.Application.Abstraction.Percistance;
+using RepairRequest.Application.dto;
 using RepairRequest.Domain;
 using RepairRequest.Service;
 using RepairRequest.Service.Exeptions;
@@ -12,16 +13,16 @@ namespace RepairRequest.Application.Comands.DeleteRequest
         private readonly IRepository<RepairRequestEntity> _requestRepository;
         private readonly ICurrentUserService _currentUserService;
         private readonly IRepository<RequestStatus> _statuses;
-        private readonly MemoryCache _memoryCeche;
+        private readonly IRequestCache<IReadOnlyCollection<GetRequestsDTO>> _requestCache;
 
         public DeleteRequestComandHandler(
             IRepository<RepairRequestEntity> requests,
-            RepairRequestMemoryCache cache,
+            IRequestCache<IReadOnlyCollection<GetRequestsDTO>> requestCache,
             IRepository<RequestStatus> statuses,
             ICurrentUserService currentUserService)
         {
             _requestRepository = requests;
-            _memoryCeche = cache.Cache;
+            _requestCache = requestCache;
             _statuses = statuses;
             _currentUserService = currentUserService;
         }
@@ -38,7 +39,6 @@ namespace RepairRequest.Application.Comands.DeleteRequest
             }
             if (repairRequest.UserId == currentUserId || repairRequest.MasterId == currentUserId)
             {
-                _memoryCeche.Clear();
                 var status = new RequestStatus();
                 if(userRoles.Contains("Master"))
                 {
@@ -53,6 +53,7 @@ namespace RepairRequest.Application.Comands.DeleteRequest
                     entity.StatusId = status.Id;
                     entity.RequestStatus = status;
                 }
+                _requestCache.Clear();
                 return (await _requestRepository.UpdateAsync(entity, cancellationToken)).RequestStatus.StatusName;
             }
             else

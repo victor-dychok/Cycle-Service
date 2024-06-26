@@ -1,0 +1,2 @@
+obj\Release\net8.0\gRPC/Users.cs \
+obj\Release\net8.0\gRPC/UsersGrpc.cs: gRPC/users.proto

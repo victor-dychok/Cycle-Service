@@ -1106,6 +1106,7 @@
           "MediatR": "12.2.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "ServiceCenter.Domain": "1.0.0"
         },
         "compile": {

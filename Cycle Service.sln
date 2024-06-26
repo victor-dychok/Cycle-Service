@@ -47,9 +47,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification.Api", "Notific
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepairRequest.Application", "RepairRequestMicroservice\RepairRequest.Application\RepairRequest.Application.csproj", "{FEDF506D-FE9C-42DE-B047-D56BC8D71B75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationSender", "NotificationMicroservice\NotificationSender\NotificationSender.csproj", "{B1DD6D3E-6217-4E49-B89E-F9F76A7C0DFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationSender", "NotificationMicroservice\NotificationSender\NotificationSender.csproj", "{B1DD6D3E-6217-4E49-B89E-F9F76A7C0DFC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Api", "AuthorizationMicroservice\Auth.Api\Auth.Api.csproj", "{1C5C11CA-AD36-48D2-9173-F42DE62258A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7325F1A0-05C7-4C82-8625-78B060899DD5}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		nginx.conf\nginx.conf = nginx.conf\nginx.conf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

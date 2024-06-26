@@ -9,8 +9,8 @@ namespace Authorization.Percistance
 {
     public class ContextTransactionCreater : IContextTransactionCreater
     {
-        private readonly AppDBContext _dbContext;
-        public ContextTransactionCreater(AppDBContext context) 
+        private readonly DockerComposeDemoDbContext _dbContext;
+        public ContextTransactionCreater(DockerComposeDemoDbContext context) 
         {
             _dbContext = context;
         }

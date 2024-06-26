@@ -23,7 +23,7 @@ namespace RepairRequest.Application.Requests.Comands.DeleteMaster
         private readonly IRepository<RepairRequestEntity> _requestsRepository;
         private readonly IRepository<RepairRequestService> _requestServices;
         private readonly IRepository<ServiceEntity> _services;
-        private readonly MemoryCache _memoryCache;
+        private readonly IRequestCache<IReadOnlyCollection<GetRequestsDTO>> _requestCache;
         private readonly IMapper _mapper;
 
         public DeleteMasterComandHandler(
@@ -31,12 +31,12 @@ namespace RepairRequest.Application.Requests.Comands.DeleteMaster
             ICurrentUserService currentUserService,
             IRepository<RequestStatus> statuses,
             IRepository<RepairRequestEntity> requests,
-            RepairRequestMemoryCache memoryCache,
+            IRequestCache<IReadOnlyCollection<GetRequestsDTO>> requestCache,
             IMapper mapper)
         {
             _userRepository = users;
             _currentUserService = currentUserService;
-            _memoryCache = memoryCache.Cache;
+            _requestCache = requestCache;
 
             _statuses = statuses;
             _requestsRepository = requests;
@@ -65,7 +65,7 @@ namespace RepairRequest.Application.Requests.Comands.DeleteMaster
                 throw new ForbidenExeption("No permision to reset master");
             }
             _requestsRepository.UpdateAsync(repairRequest);
-            _memoryCache.Clear();
+            _requestCache.Clear();
             return _mapper.Map<GetRequestsDTO>(repairRequest);
 
         }

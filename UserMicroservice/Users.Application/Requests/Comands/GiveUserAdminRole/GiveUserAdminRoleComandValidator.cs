@@ -11,7 +11,7 @@ namespace Users.Application.Comands.GiveUserAdminRole
     {
         public GiveUserAdminRoleComandValidator()
         {
-
+            RuleFor(e => e.Id).GreaterThan(0).LessThan(int.MaxValue);
         }
     }
 }

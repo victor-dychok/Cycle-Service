@@ -11,7 +11,7 @@ namespace Users.Application.Comands.GiveUserMasterRole
     {
         public GiveUserMasterRoleComandValidator()
         {
-
+            RuleFor(e => e.Id).GreaterThan(0).LessThan(int.MaxValue);
         }
     }
 }

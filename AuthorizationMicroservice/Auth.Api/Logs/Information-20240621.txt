@@ -1,0 +1,28 @@
+2024-06-21 10:45:08.008 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-21 10:45:08.320 +03:00 [INF] Now listening on: https://localhost:7104
+2024-06-21 10:45:08.320 +03:00 [INF] Now listening on: http://localhost:5148
+2024-06-21 10:45:08.322 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-21 10:45:08.322 +03:00 [INF] Hosting environment: Development
+2024-06-21 10:45:08.322 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-06-21 10:45:09.708 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-06-21 10:45:10.021 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 322.0882ms
+2024-06-21 10:45:10.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-21 10:45:10.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.4435ms
+2024-06-21 10:45:10.196 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-06-21 10:45:10.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 145.5797ms
+2024-06-21 10:45:10.467 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-06-21 10:45:10.555 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.2861ms
+2024-06-21 10:46:09.799 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-21 10:46:10.051 +03:00 [INF] Now listening on: https://localhost:7104
+2024-06-21 10:46:10.052 +03:00 [INF] Now listening on: http://localhost:5148
+2024-06-21 10:46:10.053 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-21 10:46:10.054 +03:00 [INF] Hosting environment: Development
+2024-06-21 10:46:10.055 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\AuthorizationMicroservice\Auth.Api
+2024-06-21 10:46:10.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/index.html - null null
+2024-06-21 10:46:11.153 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/index.html - 200 null text/html;charset=utf-8 232.5932ms
+2024-06-21 10:46:11.330 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-21 10:46:11.336 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.5645ms
+2024-06-21 10:46:11.339 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/_vs/browserLink - null null
+2024-06-21 10:46:11.372 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.3408ms
+2024-06-21 10:46:11.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - null null
+2024-06-21 10:46:11.568 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7104/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.1217ms

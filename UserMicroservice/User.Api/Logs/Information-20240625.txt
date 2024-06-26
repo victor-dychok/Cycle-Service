@@ -1,0 +1,1006 @@
+2024-06-25 14:29:06.678 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:29:06.862 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:29:06.873 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:29:06.878 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:29:06.891 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:29:06.891 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:29:06.892 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:29:06.892 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:29:06.892 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:29:07.675 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:29:08.377 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 715.4265ms
+2024-06-25 14:29:08.413 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:29:08.413 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:29:08.419 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.4189ms
+2024-06-25 14:29:08.453 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.3839ms
+2024-06-25 14:29:08.668 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:29:08.701 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/favicon-32x32.png - null null
+2024-06-25 14:29:08.716 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-06-25 14:29:08.716 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/favicon-32x32.png - 200 628 image/png 14.8476ms
+2024-06-25 14:29:08.777 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.4385ms
+2024-06-25 14:30:00.944 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 14:30:00.952 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:30:02.186 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 14:30:02.210 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:31:00.777 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:31:00.938 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:31:00.947 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:31:00.953 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:31:00.965 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:31:00.965 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:31:00.966 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:31:00.966 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:31:00.966 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:31:01.552 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:31:01.829 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 280.7598ms
+2024-06-25 14:31:01.860 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:31:01.860 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:31:01.863 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.0982ms
+2024-06-25 14:31:01.912 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.1635ms
+2024-06-25 14:31:02.043 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:31:02.155 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 111.9668ms
+2024-06-25 14:31:05.541 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 14:31:05.544 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:31:05.608 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 14:31:05.629 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:31:07.000 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-25 14:31:17.822 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:31:18.031 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:31:18.043 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:31:18.049 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:31:18.064 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:31:18.064 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:31:18.065 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:31:18.065 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:31:18.065 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:31:18.441 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:31:18.649 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 213.7661ms
+2024-06-25 14:31:18.680 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:31:18.680 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:31:18.683 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.66ms
+2024-06-25 14:31:18.710 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.3567ms
+2024-06-25 14:31:18.810 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:31:18.925 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.2501ms
+2024-06-25 14:31:22.217 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 14:31:22.221 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:31:22.281 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 14:31:22.301 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:31:23.601 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-25 14:32:09.313 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:32:09.485 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:32:09.497 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:32:09.504 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:32:09.524 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:32:09.524 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:32:09.524 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:32:09.524 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:32:09.524 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:32:10.077 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:32:10.281 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 212.1472ms
+2024-06-25 14:32:10.286 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:32:10.290 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.0978ms
+2024-06-25 14:32:10.303 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:32:10.333 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.8873ms
+2024-06-25 14:32:10.452 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:32:10.558 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.759ms
+2024-06-25 14:32:14.160 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 14:32:14.164 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:32:14.229 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 14:32:14.250 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:32:15.646 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-25 14:32:15.767 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-25 14:32:15.776 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-25 14:32:15.783 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 1529.8668ms
+2024-06-25 14:32:15.784 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 14:32:15.790 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 1630.3452ms
+2024-06-25 14:32:25.254 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:32:25.257 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:32:25.261 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:32:39.993 +03:00 [INF] Executed DbCommand (144ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-25 14:32:42.488 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__item_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__item_Id_0
+2024-06-25 14:32:48.326 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 23064.5396ms
+2024-06-25 14:32:48.326 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:32:48.328 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The UTC Offset of the local dateTime parameter does not match the offset argument. (Parameter 'offset')
+   at System.DateTimeOffset..ctor(DateTime dateTime, TimeSpan offset)
+   at Users.Application.UserCache`1.Set[TRequest](TRequest request, TItem item) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\UserCache.cs:line 45
+   at Application.User.Application.Query.GetById.GetByIdOrDefaultQueryHandler.Handle(GetByIdQuery request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Query\GetById\GetByIdOrDefaultQueryHandler.cs:line 59
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-25 14:32:48.378 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 23123.5692ms
+2024-06-25 14:33:51.883 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:33:51.887 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:33:51.888 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:33:57.192 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-25 14:34:01.075 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__item_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__item_Id_0
+2024-06-25 14:34:10.192 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 18303.9027ms
+2024-06-25 14:34:10.192 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:34:10.193 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The UTC Offset of the local dateTime parameter does not match the offset argument. (Parameter 'offset')
+   at System.DateTimeOffset..ctor(DateTime dateTime, TimeSpan offset)
+   at Users.Application.UserCache`1.Set[TRequest](TRequest request, TItem item) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\UserCache.cs:line 45
+   at Application.User.Application.Query.GetById.GetByIdOrDefaultQueryHandler.Handle(GetByIdQuery request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Query\GetById\GetByIdOrDefaultQueryHandler.cs:line 59
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-25 14:34:10.195 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 18312.2933ms
+2024-06-25 14:39:01.551 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:39:01.717 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:39:01.728 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:39:01.732 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:39:01.746 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:39:01.746 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:39:01.746 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:39:01.746 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:39:01.746 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:39:01.981 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:39:02.284 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 308.1481ms
+2024-06-25 14:39:02.294 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:39:02.296 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.2317ms
+2024-06-25 14:39:02.306 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:39:02.333 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.0536ms
+2024-06-25 14:39:02.435 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:39:02.512 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 77.0147ms
+2024-06-25 14:39:06.979 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 14:39:06.982 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:39:07.045 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 14:39:07.065 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:39:08.469 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-25 14:39:08.578 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-25 14:39:08.587 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-25 14:39:08.594 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 1526.022ms
+2024-06-25 14:39:08.594 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 14:39:08.600 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 1621.3756ms
+2024-06-25 14:39:14.086 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:39:14.088 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:39:14.092 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:39:21.105 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-25 14:39:24.831 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__item_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__item_Id_0
+2024-06-25 14:39:31.080 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-25 14:39:31.081 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 16988.3424ms
+2024-06-25 14:39:31.081 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:39:31.081 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 200 null application/json; charset=utf-8 16995.7487ms
+2024-06-25 14:39:38.211 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:39:38.214 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:39:38.215 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:39:48.662 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-25 14:39:48.662 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 10446.715ms
+2024-06-25 14:39:48.662 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:39:48.662 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 200 null application/json; charset=utf-8 10451.395ms
+2024-06-25 14:39:57.392 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:39:57.393 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:39:57.393 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:40:01.153 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-25 14:40:01.153 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 3759.7674ms
+2024-06-25 14:40:01.153 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:40:01.153 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 200 null application/json; charset=utf-8 3760.7028ms
+2024-06-25 14:41:02.335 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:41:02.497 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:41:02.509 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:41:02.515 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:41:02.532 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:41:02.532 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:41:02.533 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:41:02.533 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:41:02.533 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:41:02.776 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:41:03.274 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 506.1853ms
+2024-06-25 14:41:03.315 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:41:03.319 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:41:03.322 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.8231ms
+2024-06-25 14:41:03.363 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.0414ms
+2024-06-25 14:41:03.495 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:41:03.600 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 105.2468ms
+2024-06-25 14:41:09.324 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:41:09.328 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:41:09.397 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:41:09.416 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:41:30.772 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-25 14:41:30.778 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 21358.7084ms
+2024-06-25 14:41:30.778 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:41:30.785 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 200 null application/json; charset=utf-8 21460.6582ms
+2024-06-25 14:41:33.480 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:41:33.484 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:41:33.485 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:42:16.592 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-25 14:42:16.596 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 43111.1421ms
+2024-06-25 14:42:16.597 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:42:16.598 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 200 null application/json; charset=utf-8 43118.4145ms
+2024-06-25 14:52:19.653 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:52:19.910 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:52:19.925 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:52:19.931 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:52:19.952 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:52:19.952 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:52:19.953 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:52:19.953 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:52:19.953 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:52:21.281 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:52:21.799 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 526.4446ms
+2024-06-25 14:52:21.852 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:52:21.854 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:52:21.858 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.8903ms
+2024-06-25 14:52:22.209 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 357.1554ms
+2024-06-25 14:52:22.312 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:52:22.451 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 139.03ms
+2024-06-25 14:52:30.154 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:52:30.157 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:52:30.216 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:52:30.236 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:53:00.810 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 30571.2789ms
+2024-06-25 14:53:00.811 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:53:00.814 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 1, qs: 0, aw: False, bw: SpinningDown, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 1, async-ops: 0, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-LOPAV0P(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=7,QueuedItems=0,CompletedItems=164,Timers=8), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at StackExchange.Redis.ConnectionMultiplexer.ExecuteSyncImpl[T](Message message, ResultProcessor`1 processor, ServerEndPoint server, T defaultValue) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 2105
+   at StackExchange.Redis.RedisBase.ExecuteSync[T](Message message, ResultProcessor`1 processor, ServerEndPoint server, T defaultValue) in /_/src/StackExchange.Redis/RedisBase.cs:line 62
+   at StackExchange.Redis.RedisDatabase.HashGet(RedisKey key, RedisValue[] hashFields, CommandFlags flags) in /_/src/StackExchange.Redis/RedisDatabase.cs:line 407
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefresh(String key, Boolean getData)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.Get(String key)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetString(IDistributedCache cache, String key)
+   at Users.Application.UserCache`1.TryGetValue[TRequest](TRequest request, TItem& item) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\UserCache.cs:line 54
+   at Application.User.Application.Query.GetById.GetByIdOrDefaultQueryHandler.Handle(GetByIdQuery request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Query\GetById\GetByIdOrDefaultQueryHandler.cs:line 40
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-25 14:53:00.860 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 30706.5156ms
+2024-06-25 14:53:13.321 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:53:13.327 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:53:13.328 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:53:19.828 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-25 14:53:19.901 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__item_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__item_Id_0
+2024-06-25 14:53:19.940 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-25 14:53:19.942 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 6614.1134ms
+2024-06-25 14:53:19.942 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:53:19.943 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 200 null application/json; charset=utf-8 6621.3276ms
+2024-06-25 14:53:36.722 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:53:36.725 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:53:36.726 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:53:41.998 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 5271.8341ms
+2024-06-25 14:53:41.998 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:53:41.999 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 1, qs: 0, aw: False, bw: SpinningDown, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 4, async-ops: 0, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-LOPAV0P(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=8,QueuedItems=0,CompletedItems=435,Timers=6), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at StackExchange.Redis.ConnectionMultiplexer.ExecuteSyncImpl[T](Message message, ResultProcessor`1 processor, ServerEndPoint server, T defaultValue) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 2105
+   at StackExchange.Redis.RedisBase.ExecuteSync[T](Message message, ResultProcessor`1 processor, ServerEndPoint server, T defaultValue) in /_/src/StackExchange.Redis/RedisBase.cs:line 62
+   at StackExchange.Redis.RedisDatabase.HashGet(RedisKey key, RedisValue[] hashFields, CommandFlags flags) in /_/src/StackExchange.Redis/RedisDatabase.cs:line 407
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefresh(String key, Boolean getData)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.Get(String key)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetString(IDistributedCache cache, String key)
+   at Users.Application.UserCache`1.TryGetValue[TRequest](TRequest request, TItem& item) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\UserCache.cs:line 54
+   at Application.User.Application.Query.GetById.GetByIdOrDefaultQueryHandler.Handle(GetByIdQuery request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Query\GetById\GetByIdOrDefaultQueryHandler.cs:line 40
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-25 14:53:42.001 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 5279.2286ms
+2024-06-25 14:53:52.263 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:53:52.263 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:53:52.263 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:53:52.279 +03:00 [INF] Executing OkObjectResult, writing value of type 'Users.Application.dto.GetUserDto'.
+2024-06-25 14:53:52.280 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 16.573ms
+2024-06-25 14:53:52.280 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:53:52.280 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 200 null application/json; charset=utf-8 17.3074ms
+2024-06-25 14:55:48.591 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:55:48.749 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:55:48.759 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:55:48.764 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:55:48.778 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:55:48.778 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:55:48.778 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:55:48.778 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:55:48.778 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:55:49.193 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:55:49.408 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 218.014ms
+2024-06-25 14:55:49.422 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:55:49.426 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.8799ms
+2024-06-25 14:55:49.437 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:55:49.467 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.9823ms
+2024-06-25 14:55:49.577 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:55:49.669 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.2619ms
+2024-06-25 14:55:54.849 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:55:54.853 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:55:54.912 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:55:54.932 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:56:06.684 +03:00 [ERR] An error occurred using the connection to database 'Developer' on server 'localhost'.
+2024-06-25 14:56:06.866 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 11931.6182ms
+2024-06-25 14:56:06.867 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:56:06.876 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 499 null null 12026.1815ms
+2024-06-25 14:56:14.528 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:56:14.710 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:56:14.722 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:56:14.728 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:56:14.742 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:56:14.742 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:56:14.743 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:56:14.743 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:56:14.743 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:56:15.328 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:56:15.551 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 227.7498ms
+2024-06-25 14:56:15.589 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:56:15.589 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:56:15.594 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 5.1573ms
+2024-06-25 14:56:15.622 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.2922ms
+2024-06-25 14:56:15.704 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:56:15.789 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.6185ms
+2024-06-25 14:56:21.577 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:56:21.580 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:56:21.642 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:56:21.660 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:56:36.081 +03:00 [ERR] An error occurred using the connection to database 'Developer' on server 'localhost'.
+2024-06-25 14:56:36.262 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 14599.2079ms
+2024-06-25 14:56:36.263 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:56:36.272 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 499 null null 14695.5133ms
+2024-06-25 14:57:37.717 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:57:37.890 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:57:37.900 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:57:37.906 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:57:37.923 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:57:37.923 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:57:37.923 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:57:37.923 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:57:37.923 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:57:38.432 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:57:38.689 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 259.2087ms
+2024-06-25 14:57:38.724 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:57:38.724 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:57:38.727 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.5094ms
+2024-06-25 14:57:38.760 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.9432ms
+2024-06-25 14:57:38.884 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:57:38.984 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.8805ms
+2024-06-25 14:57:44.957 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:57:44.961 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:57:45.021 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:57:45.040 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:58:06.483 +03:00 [ERR] An error occurred using the connection to database 'Developer' on server 'localhost'.
+2024-06-25 14:58:06.644 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 21600.8868ms
+2024-06-25 14:58:06.644 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:58:06.647 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): The system cannot find the file specified.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Users.Percistance.ContextTransactionCreater.BeginTransaction(CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Percistance\ContextTransactionCreater.cs:line 19
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 21
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2024-06-25 14:58:06.800 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 21842.4871ms
+2024-06-25 14:58:22.930 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:58:22.933 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:58:22.933 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:58:22.977 +03:00 [ERR] An error occurred using the connection to database 'Developer' on server 'localhost'.
+2024-06-25 14:58:23.100 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 166.5491ms
+2024-06-25 14:58:23.101 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:58:23.102 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
+ ---> System.ComponentModel.Win32Exception (10054): An existing connection was forcibly closed by the remote host.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParser.ConsumePreLoginHandshake(SqlConnectionEncryptOption encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean& marsCapable, Boolean& fedAuthRequired, Boolean tlsFirst, String serverCert)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Users.Percistance.ContextTransactionCreater.BeginTransaction(CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Percistance\ContextTransactionCreater.cs:line 19
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 21
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d2a4305a-5097-479e-a334-0a5c82a8ff70
+Error Number:10054,State:0,Class:20
+2024-06-25 14:58:23.108 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 178.4596ms
+2024-06-25 14:58:27.653 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:58:27.656 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:58:27.656 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:58:27.711 +03:00 [ERR] An error occurred using the connection to database 'Developer' on server 'localhost'.
+2024-06-25 14:58:27.879 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 222.9324ms
+2024-06-25 14:58:27.880 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:58:27.881 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
+ ---> System.ComponentModel.Win32Exception (10054): An existing connection was forcibly closed by the remote host.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Users.Percistance.ContextTransactionCreater.BeginTransaction(CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Percistance\ContextTransactionCreater.cs:line 19
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 21
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:d2a4305a-5097-479e-a334-0a5c82a8ff70
+Error Number:10054,State:0,Class:20
+2024-06-25 14:58:27.885 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 232.2052ms
+2024-06-25 14:58:40.365 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:58:40.528 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:58:40.538 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:58:40.548 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:58:40.565 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:58:40.565 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:58:40.566 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:58:40.566 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:58:40.566 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:58:41.222 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:58:41.432 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 212.5975ms
+2024-06-25 14:58:41.459 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:58:41.459 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:58:41.462 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.2185ms
+2024-06-25 14:58:41.492 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.9887ms
+2024-06-25 14:58:41.581 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:58:41.667 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.4997ms
+2024-06-25 14:58:47.379 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:58:47.382 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:58:47.443 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:58:47.461 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 14:59:21.609 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 34144.5969ms
+2024-06-25 14:59:21.610 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:59:21.613 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=HMGET, timeout: 5000, inst: 0, qu: 1, qs: 0, aw: False, bw: SpinningDown, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 1, async-ops: 0, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-LOPAV0P(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=7,QueuedItems=0,CompletedItems=176,Timers=8), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at Application.User.Application.Query.GetById.GetByIdOrDefaultQueryHandler.Handle(GetByIdQuery request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Query\GetById\GetByIdOrDefaultQueryHandler.cs:line 49
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-25 14:59:21.646 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 34267.3811ms
+2024-06-25 14:59:33.100 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 14:59:33.270 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 14:59:33.285 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:59:33.293 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 14:59:33.306 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 14:59:33.306 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 14:59:33.307 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 14:59:33.307 +03:00 [INF] Hosting environment: Development
+2024-06-25 14:59:33.307 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 14:59:33.929 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 14:59:34.151 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 225.9406ms
+2024-06-25 14:59:34.162 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 14:59:34.165 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.8064ms
+2024-06-25 14:59:34.179 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 14:59:34.209 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.0879ms
+2024-06-25 14:59:34.309 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 14:59:34.396 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.9069ms
+2024-06-25 14:59:40.833 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users/1 - null null
+2024-06-25 14:59:40.837 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 14:59:40.907 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 14:59:40.928 +03:00 [INF] Route matched with {action = "GetById", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 15:00:01.307 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__request_Id_0
+2024-06-25 15:00:01.383 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__item_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[RoleId], [a].[UserId]
+FROM [AppUserAppRole] AS [a]
+WHERE [a].[UserId] = @__item_Id_0
+2024-06-25 15:00:06.689 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetById (User.Api) in 25757.6048ms
+2024-06-25 15:00:06.690 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetById (User.Api)'
+2024-06-25 15:00:06.692 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s). ConnectTimeout, command=EVAL, timeout: 5000, inst: 0, qu: 1, qs: 0, aw: False, bw: SpinningDown, rs: NotStarted, ws: Initializing, in: 0, last-in: 0, cur-in: 0, sync-ops: 2, async-ops: 0, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-LOPAV0P(SE.Redis-v2.7.27.49176), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=8,QueuedItems=0,CompletedItems=208,Timers=8), v: 2.7.27.49176 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). ConnectTimeout
+   --- End of inner exception stack trace ---
+   at StackExchange.Redis.ConnectionMultiplexer.ExecuteSyncImpl[T](Message message, ResultProcessor`1 processor, ServerEndPoint server, T defaultValue) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 2105
+   at StackExchange.Redis.RedisBase.ExecuteSync[T](Message message, ResultProcessor`1 processor, ServerEndPoint server, T defaultValue) in /_/src/StackExchange.Redis/RedisBase.cs:line 62
+   at StackExchange.Redis.RedisDatabase.ScriptEvaluate(String script, RedisKey[] keys, RedisValue[] values, CommandFlags flags) in /_/src/StackExchange.Redis/RedisDatabase.cs:line 1519
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.Set(String key, Byte[] value, DistributedCacheEntryOptions options)
+   at Users.Application.UserCache`1.Set[TRequest](TRequest request, TItem item) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\UserCache.cs:line 45
+   at Application.User.Application.Query.GetById.GetByIdOrDefaultQueryHandler.Handle(GetByIdQuery request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Query\GetById\GetByIdOrDefaultQueryHandler.cs:line 65
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.GetById(Int32 id, IMediator mediator, CancellationToken token) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-25 15:00:06.733 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users/1 - 500 null text/plain; charset=utf-8 25899.8665ms
+2024-06-25 19:47:50.633 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 19:47:50.822 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 19:47:50.831 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 19:47:50.836 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 19:47:50.850 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 19:47:50.850 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 19:47:50.850 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 19:47:50.850 +03:00 [INF] Hosting environment: Development
+2024-06-25 19:47:50.850 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 19:47:51.577 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 19:47:51.800 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 226.9953ms
+2024-06-25 19:47:51.828 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 19:47:51.828 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 19:47:51.831 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 3.2583ms
+2024-06-25 19:47:51.858 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.3945ms
+2024-06-25 19:47:51.957 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 19:47:52.061 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 103.5691ms
+2024-06-25 19:48:50.263 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 19:48:50.268 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 19:48:51.103 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 19:48:51.128 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 19:48:53.809 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+ORDER BY [u].[Id]
+2024-06-25 19:48:53.947 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-25 19:48:53.958 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-25 19:48:53.966 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 2835.1184ms
+2024-06-25 19:48:53.966 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 19:48:53.975 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 3714.4033ms
+2024-06-25 19:49:12.882 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 19:49:12.884 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 19:49:12.885 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 19:49:20.068 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-25 19:49:20.070 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-25 19:49:20.070 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 7184.4944ms
+2024-06-25 19:49:20.070 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 19:49:20.070 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 7188.0553ms
+2024-06-25 19:49:55.848 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5234/users?Login=user&Password=12345678&Phone=%2B375291234569&Email=user%40gmail.com - null 0
+2024-06-25 19:49:55.852 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-25 19:49:55.857 +03:00 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Users.Application.Comands.CreateUser.CreateUserComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 19:49:56.006 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-25 19:49:56.117 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 50), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Login], [PasswordHash], [Phone])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-06-25 19:49:56.143 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Client'
+2024-06-25 19:49:56.171 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserAppRole] ([RoleId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-25 19:49:56.205 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Users.Percistance.AppDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_AppUserAppRole_AppUserRole_RoleId". The conflict occurred in database "Developer", table "dbo.AppUserRole", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:68927d08-ec47-471d-818b-dd9df77b8392
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_AppUserAppRole_AppUserRole_RoleId". The conflict occurred in database "Developer", table "dbo.AppUserRole", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:68927d08-ec47-471d-818b-dd9df77b8392
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-06-25 19:49:56.509 +03:00 [INF] Executed action User.Api.Controllers.UserController.Post (User.Api) in 651.6954ms
+2024-06-25 19:49:56.509 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-25 19:49:56.511 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_AppUserAppRole_AppUserRole_RoleId". The conflict occurred in database "Developer", table "dbo.AppUserRole", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:68927d08-ec47-471d-818b-dd9df77b8392
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Users.Percistance.SqlServerBaseReository`1.AddAsync(TEntity item, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Percistance\SqlServerBaseReository.cs:line 32
+   at Users.Application.Comands.CreateUser.CreateUserComandHendler.Handle(CreateUserComand request, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Requests\Comands\CreateUser\CreateUserComandHendler.cs:line 52
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 25
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 32
+   at Users.Application.Behaviors.ContextTransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ContextTransactionBehavior.cs:line 34
+   at Users.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\Users.Application\Behaviors\ValidationBehavior.cs:line 24
+   at User.Api.Controllers.UserController.Post(CreateUserComand item, IMediator mediator, CancellationToken cancellationToken) in D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api\Controllers\UserController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-25 19:49:56.540 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5234/users?Login=user&Password=12345678&Phone=%2B375291234569&Email=user%40gmail.com - 500 null text/plain; charset=utf-8 692.1385ms
+2024-06-25 19:52:50.542 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 19:52:50.705 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 19:52:50.716 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 19:52:50.721 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 19:52:50.739 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 19:52:50.739 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 19:52:50.739 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 19:52:50.739 +03:00 [INF] Hosting environment: Development
+2024-06-25 19:52:50.739 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 19:52:51.123 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 19:52:51.321 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 202.71ms
+2024-06-25 19:52:51.358 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 19:52:51.358 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 19:52:51.361 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.7129ms
+2024-06-25 19:52:51.476 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 117.5563ms
+2024-06-25 19:52:51.558 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 19:52:51.648 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.167ms
+2024-06-25 19:53:08.739 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/users - null null
+2024-06-25 19:53:08.743 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 19:53:08.852 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 19:53:08.872 +03:00 [INF] Route matched with {action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(Users.Application.Query.GetAll.GetListQuery, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 19:53:18.040 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE 0 = 1
+2024-06-25 19:53:18.062 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Users.Application.dto.GetUserDto, Users.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-25 19:53:18.068 +03:00 [INF] Executed action User.Api.Controllers.UserController.GetAll (User.Api) in 9193.8829ms
+2024-06-25 19:53:18.069 +03:00 [INF] Executed endpoint 'User.Api.Controllers.UserController.GetAll (User.Api)'
+2024-06-25 19:53:18.075 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/users - 200 null application/json; charset=utf-8 9336.2238ms
+2024-06-25 19:53:48.409 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5234/users?Login=user&Password=12345678&Phone=%2B375291234569&Email=user%40gmail.com - null 0
+2024-06-25 19:53:48.415 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-25 19:53:48.422 +03:00 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Users.Application.Comands.CreateUser.CreateUserComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 19:53:48.510 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-25 19:53:48.656 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 50), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Login], [PasswordHash], [Phone])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-06-25 19:53:48.688 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Client'
+2024-06-25 19:53:48.703 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserRole] ([Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-25 19:53:48.738 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserAppRole] ([RoleId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-25 19:55:29.257 +03:00 [INF] User profile is available. Using 'C:\Users\vitia\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-25 19:55:29.431 +03:00 [WRN] Overriding address(es) 'http://localhost:5234, http://localhost:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-06-25 19:55:29.441 +03:00 [WRN] HTTP/2 is not enabled for 127.0.0.1:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 19:55:29.446 +03:00 [WRN] HTTP/2 is not enabled for [::1]:5234. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2024-06-25 19:55:29.460 +03:00 [INF] Now listening on: http://localhost:5235
+2024-06-25 19:55:29.460 +03:00 [INF] Now listening on: http://localhost:5234
+2024-06-25 19:55:29.461 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-25 19:55:29.461 +03:00 [INF] Hosting environment: Development
+2024-06-25 19:55:29.461 +03:00 [INF] Content root path: D:\учёба\курсы ITA\Cycle Service\Cycle Service\UserMicroservice\User.Api
+2024-06-25 19:55:30.135 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-06-25 19:55:30.350 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 220.0539ms
+2024-06-25 19:55:30.379 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-25 19:55:30.379 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_vs/browserLink - null null
+2024-06-25 19:55:30.381 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 2.2009ms
+2024-06-25 19:55:30.414 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.3029ms
+2024-06-25 19:55:30.503 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-06-25 19:55:30.590 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.1447ms
+2024-06-25 19:56:14.248 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5234/users?Login=user&Password=12345678&Phone=%2B375291234569&Email=user%40gmail.com - null 0
+2024-06-25 19:56:14.251 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-06-25 19:56:14.357 +03:00 [INF] Executing endpoint 'User.Api.Controllers.UserController.Post (User.Api)'
+2024-06-25 19:56:14.376 +03:00 [INF] Route matched with {action = "Post", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Users.Application.Comands.CreateUser.CreateUserComand, MediatR.IMediator, System.Threading.CancellationToken) on controller User.Api.Controllers.UserController (User.Api).
+2024-06-25 19:56:15.635 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[@__Trim_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[Email], [u].[Login], [u].[PasswordHash], [u].[Phone]
+FROM [Users] AS [u]
+WHERE [u].[Login] = @__Trim_0
+2024-06-25 19:56:15.799 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 50), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [Login], [PasswordHash], [Phone])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2024-06-25 19:56:15.828 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[Name]
+FROM [AppUserRole] AS [a]
+WHERE [a].[Name] = N'Client'
+2024-06-25 19:56:15.840 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserRole] ([Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2024-06-25 19:56:15.864 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUserAppRole] ([RoleId], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
